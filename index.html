@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bioinformatics | Guangyu Wang Lab</title>
+  <link rel="icon" type="image/x-icon" href="/assets/baby.ico">
+
+
+  <!-- --------- Footer --------- -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+
+  <!-- --------- CSS Files --------- -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="transition transition-1 is-active"></div>
+    <header>
+      <!-- --------- Navbar --------- -->
+      <nav class="container">
+          
+        <div class="links" id="link">
+          <ul>
+            <li>
+              <a href="index.html" class="nav-link" >Home</a>
+            </li>
+            <li>
+              <a href="team.html" class="nav-link" >Team</a>
+            </li>
+            <li>
+              <a href="software.html" class="nav-link">Software</a>
+            </li>
+            <li>
+              <a href="publication.html" class="nav-link">Publication</a>
+            </li>
+            <li>
+              <a href="news.html" class="nav-link">News</a>
+            </li>
+            <li>
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+            <li>
+              <a href="open_position.html" class="nav-link">Open Position</a>
+            </li>
+          </ul>
+        </div>
+          
+      </nav>
+    </header>
+
+    <main>
+    <!-- --------- Showcase Area Section --------- -->
+    <div class="showcase-area" id="home" >
+      <div class="container ">
+        <div class="showcase-image " >
+            <!---<img src="./assets/baby.png" class="person" width="600" height="600">--->
+        
+        <video id="video" class="person" width="1600" height="1600" autoplay loop muted>
+            <source src="./assets/umap2_try.mp4" type="video/mp4">
+            <img src="./assets/image.png" alt="Fallback image">
+        </video>
+       
+      </div>
+      
+        <div class="name">
+            <h1 class="heading" > <span>WANG</span> LAB</h1>
+            
+        </div>
+        <div class="heading_small">
+          <h2 class="sub-heading">Computational Biology and Bioinformatics</h2>
+        </div>
+      </div>
+      <div class="btn">
+      <button onclick="Play()" type="button" class="button">▶</button>
+    <button onclick="Play()" type="button" class="button pause">⏸</button><br> 
+  </div>
+    </div>  
+    
+    <script> 
+      function Play()
+      {
+        var vid = document.getElementById("video");
+        if(vid.paused) {
+          vid.play();
+        }
+        else {
+          vid.pause();
+        }
+      }
+    </script> 
+    <!-- --------- Research Section --------- -->
+    <!--EDIT TEXT HERE-->
+    <div class="research" id="home" >
+      <div class="container ">
+        <div class="content">
+            <h1 class="heading" >RESEARCH</h1>
+            <p class="text">
+              The broad goals of the research in the Wang lab are to understand:<br>
+                 <span>• How epigenetics regulates transcriptome </span><br>
+                 <span>• How transcriptional shifts affect cell states and cell/tissue level phenotypes</span><br>
+              To achieve our goal, we are motivated by modulating the causes of transcriptional shifts and the translational potential of identifying. We develop and apply computational tools to integrate and interpret large biomedical and molecular datasets that can uncover the regulation mechanism and the effects of the transcriptional process.
+              Specifically, we aim to utilize high-throughput multi-omics datasets, mostly based on DNA and RNA sequencing, to develop models that explain how cell state is regulated. We are especially interested in endothelial cells (ECs), covering various aspects of their biology, such as their differentiation and trans-differentiation, and the stability/plasticity of their chromatin structure and histone modification. </p>
+            <h2 class="sub-heading">
+              Single-cell dynamics
+            </h2>
+            <p class="text">
+              Single-cell transcriptomics (scRNA-seq) and single-cell epigenomics (scATAC-seq) data revolutionize the field of regulatory genomics. We combine cutting-edge computational approaches with state-of-the-art single-cell profiling to better understand cell state transitions, decode cis-regulatory programs, and predict the effect of TF perturbations in single-cell datasets and their effect on cell identity in contexts such as cell trans-differentiation and reprogramming. 
+            </p>
+            <h2 class="sub-heading">
+              Chromatin structure & Histone modification:
+            </h2>
+            <p class="text">
+              The Wang lab seeks to understand the chromatin folding of genomic DNA, which is one of the most basic and important genomic regulations in dynamic processes such as differentiation or cellular state switching. We have developed computational methods to investigate cell identity-associated TADs (topological associated domains), stripes, and loops. We initially detected split and merging of TADs comparing fibroblast to ECs and suggested these TAD splitting and merging may play important role in cell differentiation and are highly associated with histone modification alternation (Wang et al, Genome Biology, 2020). We also developed computational methods that decipher open chromatin, histone modification, and transcription factor binding genome-wide in sub-populations of cells undergoing dynamic processes such as differentiation or stochastic state switching (Wang et al, Nature Communication, 2020; Wang et al, GPB, 2021).
+            </p>
+            <h2 class="sub-heading">
+              AI & Machine learning
+            </h2>
+            <p class="text">
+              Data-driven research in Wang lab is powered by artificial intelligence (AI) and machine learning that guide us to understand more about biological systems and processes. We are currently working on:<br>
+                 <span>1. Deep learning for transcriptome to predict cell state transition and pseudo-time based on the RNA velocity model. (Nature Biotechnology, 2023) </span><br>
+                 <span>2. Transferring learning for scRNA-seq and scATAC-seq to predict therapy choice and patient outcome.</span><br>
+                 <span>3. Web-based workflows of single-cell multi-omics to efficiently implement data preparation, advanced analysis, and integrative analysis of scRNA-seq and scATAC-seq.</span><br>
+            </div>
+      </div>
+    </div>
+    
+  </main>
+
+  <footer>
+    <!-- --------- Footer --------- -->
+    <div class="foot">
+      <div class="container ">
+      <a href="https://github.com/GuangyuWangLab" class="fa fa-github" style="font-size:24px"></a> <a href="" class="fa fa-linkedin-square" style="font-size:24px"></a><a href="https://twitter.com/Guangyu_Wang01" class="fa fa-twitter" style="font-size:24px"></a>
+      <p class="text">©2022 by Wang lab.</p>
+      <p class="text text2">Design by Tu (Alex) N Tran.</p>
+    </div>
+    </a>
+  </div>
+  </footer>
+
+  <!-- JavaScript Files -->
+
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

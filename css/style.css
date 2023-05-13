@@ -277,6 +277,7 @@ header {
  .heading_small .sub-heading{
   font-size: 30px;
  }
+ 
 /* --------------- Research Section Styling --------------- */
 .research{
   background-color: rgb(244, 243, 243);
@@ -429,63 +430,29 @@ margin-top: -80px;
 
 @media (max-width: 1000px) {
   .showcase-area .name .heading{
-    font-size: 70px;
+   width: 300%;
   }
-  .sub-heading{
-    font-size: 20px;
-    margin-left: -380px;
-  }
-  .heading{
-    margin-left: -660px;
-  }
-  .heading_small{
-    margin-left: 780px;
-    
-  }
-  .heading_small .sub-heading{
-    font-size: 25px;
-  }
-  .text{
-    width: 650px;
-    font-size: 14px;
-    margin-left: -380px;
-  }
+  
   .bggray{
-   width: 150%;
+   width: 180%;
   }
   .research{
-    width: 150%;
-  }
-  .links{
-    margin-left: 100px;
-  }
-  .foot .fa-github  {
-    margin-left: 400px;
-    color: black;
+    width: 180%;
   }
 
   .foot{
-    width: 150%;
+    width: 180%;
   }
-  .foot .text{
-    margin-left: 390px;
-  }
-  .foot .text2{
-    margin-left: 370px;
-  }
+  
   .btn{
-    margin-left: 650px;
+    margin-left: 1400px;
    }
 
 }
 
-/* --------------- 768px Screens --------------- */
+/* --------------- 768px Screens --------------- *
 
 @media (max-width: 768px) {
-  .showcase-area .name .heading{
-    font-size: 50px;
-    width: 1000px;
-  }
   .bggray{
     width: 200%;
    }
@@ -496,12 +463,10 @@ margin-top: -80px;
     width: 200%;
   }
 
-  .btn{
-    margin-left: 500px;
-   }
+  
 }
 
-/* --------------- 500px Screens --------------- */
+/* --------------- 500px Screens --------------- *
 
 @media (max-width: 500px) {
   .bggray{
@@ -513,10 +478,23 @@ margin-top: -80px;
    .foot{
     width: 300%;
   }
-  .btn{
-    margin-left: 400px;
-   }
+ 
    .nav-link{
     font-size: 12px;
    }
+   header{
+    width: 800px;
+  }
+}
+/* --------------- 500px Screens --------------- *
+
+@media (max-width: 420px){
+
+.research{
+  width: 100%;
+}
+.foot{
+  width: 100%;
+}
+
 }

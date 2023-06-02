@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="open">
 
 <head>
   <meta charset="UTF-8">
@@ -73,41 +73,48 @@
     <div class="position bggray">
       <div class="container">
         <div class="content">
-        <h1 class="heading" >AVAILABLE POSITIONS</h1>
-        <h3 class="heading sub" >Current Opportunities at Wang lab</h3>
-        <h2 class="sub-heading">POSTDOCS</h2>
-        <p class="text">
+        <h1 class="heading edit" >AVAILABLE POSITIONS</h1>
+        <h3 class="heading sub edit" >Current Opportunities at Wang lab</h3>
+        <h2 class="sub-heading edit">POSTDOCS</h2>
+        <p class="text edit">
           To apply for a position, please send a CV, cover letter or research statement, and information for three references to the PI, Guangyu Wang, PhD (<u><a href="mailto: gwang2@houstonmethodist.org" class="link">gwang2@houstonmethodist.org</a></u>).<br>
           Qualifications:<br><br>
 
           Applicants must have a training in area related to bioinformatics. Experiences with algorithm development and analysis of multiple high-dimension datasets will be a strong plus. Candidates with a PhD degree in biology, medicine, genomics, bioinformatics, computer science, electronics engineering, mathematics, statistics, physics, or other related area are encouraged to apply.
         </p>
-        <h2 class="sub-heading">STUDENTS</h2>
-        <p class="text">
+        <h2 class="sub-heading edit">STUDENTS</h2>
+        <p class="text edit">
           We have openings for motivated undergraduate and graduate students from various scientific disciplines (biology, medicine, statistics, engineering, etc) who wish to work at the interface of genomics, bioinformatics and medicine. Please contact <u><a href="mailto: gwang2@houstonmethodist.org" class="link">gwang2@houstonmethodist.org</a></u> for more information.
         </p>
         </div>
       </div>
     </div>
-
+    
     
   </main>
 
   <footer>
     <!-- --------- Footer --------- -->
-   <div class="foot">
+    <div class="foot">
       <div class="container ">
+      
       <a href="https://github.com/GuangyuWangLab2021" class="fa fa-github" style="font-size:24px"></a> <a href="https://www.linkedin.com/in/guangyu-wang-27696819b/" class="fa fa-linkedin-square" style="font-size:24px"></a><a href="https://twitter.com/Guangyu_Wang01" class="fa fa-twitter" style="font-size:24px"></a>
       <p class="text">©2023 by Wang lab.</p>
       <p class="text text2">Design by Tu (Alex) N Tran.</p>
+      
     </div>
-    </a>
+    <button id="edit" onclick="myFunction()">edit</button>
+    <button id="edit" onclick="mySave()">save</button>
   </div>
+  
   </footer>
 
   <!-- JavaScript Files -->
 
+  <script src="./js/jquery.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 </body>
 
 </html>

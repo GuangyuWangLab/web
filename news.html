@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="news">
 
 <head>
   <meta charset="UTF-8">
@@ -74,11 +74,11 @@
     <div class="news bggray" >
       <div class="container ">
         <div class="content">
-          <h1 class="heading" >NEWS 📰</h1>
-          <p class="text">
+          <h1 class="heading edit" >NEWS 📰</h1>
+          <p class="text edit">
             • 5/18/2023 Our collaboration paper was accepted in Circulation Research! <br>
             • 5/12/2023 Guangyu becomes a youth editor in Genomics, Proteomics & Bioinformatics (IF=8.9, Q1).<br>
-            • 5/10/2023 Zeyu Yang from Rice University accepted our offer as a Research Assistant. <br>
+            • 5/10/2023 Zeyu Yang from Rice University accepted our offer as a Research Assistant.<br>
             • 4/3/2023 cellDancer is online. <br>
             • 3/28/2023 Guangyu attended PCBC celebrating at NIH and gave a talk about cellDancer. <br>
             • 1/25/2023 Our cellDancer paper was accepted at <u><a href="https://www.nature.com/articles/s41587-023-01728-5" class="link">Nature Biotech</a></u>. Congratulations to Shengyu and Pengzhi! <br>
@@ -91,32 +91,39 @@
             • 7/1/2021 Shengyu Li will join us as a postdoc fellowship! <br>
             • 6/2021 Lingqun Ye will join our team soon! Cheers!<br>
             • 6/2021 We move back to Houston! Cheers! <br>
-            • 3/2021 Dr. Wang received an assistant professor offer at Houston Methodist, Weill Cornell Medical College. <br>
+            • 3/2021 Dr. Wang received an assistant professor offer at Houston Methodist, Weill Cornell Medical College <br>
 
           </p>
         </div>
       </div>
     </div>
     
-
+    
     
   </main>
 
   <footer>
     <!-- --------- Footer --------- -->
-   <div class="foot">
+    <div class="foot">
       <div class="container ">
+      
       <a href="https://github.com/GuangyuWangLab2021" class="fa fa-github" style="font-size:24px"></a> <a href="https://www.linkedin.com/in/guangyu-wang-27696819b/" class="fa fa-linkedin-square" style="font-size:24px"></a><a href="https://twitter.com/Guangyu_Wang01" class="fa fa-twitter" style="font-size:24px"></a>
       <p class="text">©2023 by Wang lab.</p>
       <p class="text text2">Design by Tu (Alex) N Tran.</p>
+      
     </div>
-    </a>
+    <button id="edit" onclick="myFunction()">edit</button>
+    <button id="edit" onclick="mySave()">save</button>
   </div>
+  
   </footer>
 
   <!-- JavaScript Files -->
 
+  <script src="./js/jquery.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 </body>
 
 </html>

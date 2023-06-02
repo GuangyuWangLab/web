@@ -66,9 +66,10 @@ ul {
   font-family: 'Source Serif Pro', serif;
   margin-left: -320px;
   padding-top: 50px;
+  width: 850px;
 }
 .foot{
-  height: 150px;
+  height: auto;
 }
 
 .heading{
@@ -294,9 +295,7 @@ header {
   padding-bottom: 150px;
  }
 */
- .research .content span{
-  padding-left: 20px;
- }
+ 
 
  /* --------------- Software Section Styling --------------- */
 /*.software .heading{
@@ -423,7 +422,26 @@ margin-top: -80px;
   opacity: 1;
 }
 
+/* --------------- Error --------------- */
+#error{
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+}
 
+#edit{
+  background-color: transparent;
+  border-radius: 3px;
+  border-color: transparent;
+  margin-left: 10px;
+  text-align: center;
+  color: lightgray;
+  width: 35px;
+}
+#edit:hover{
+  background-color: grey;
+}
 
 
 /* --------------- 1000px Screens --------------- */

@@ -94,7 +94,7 @@ window.onload = () => {
         errorContainer.textContent = 'Error: JSON file not found.';
       });
       
-    }, 1000);
+    }, 500);
   
     for (let i = 0; i < anchors.length; i++) {
       const anchor = anchors[i];
@@ -111,7 +111,7 @@ window.onload = () => {
   
         setInterval(() => {
           window.location.href = target;
-        }, 1000);
+        }, 500);
       })
     }
   }

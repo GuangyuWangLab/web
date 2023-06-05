@@ -6,11 +6,10 @@
     pageId = currentPage.replace('.html', ''); // Use the filename as the page ID
     localStorage.setItem('pageId', pageId); // Save the identifier in localStorage
   }
-
   function myFunction(){
     let pass = prompt("Please enter your password");
     if (pass == "000") {
-      alert("Recommend edit content in Microsoft Word, then copy to website.\n • Big heading: font: Source Serif Pro, size: 37.5 \n • Small heading: font:Source Serif Pro, size 19. \n • Text: font:Calibri Light (Headings), size 12 \n\nAfter edit, click save and upload the downloaded file in ./js/json on github page")
+      alert("Recommend edit content in Microsoft Word, then copy to website.\n • Big heading: font: Source Serif Pro, size: 37.5 \n • Small heading: font:Source Serif Pro, size 19. \n • Text: font:Calibri Light (Headings), size 12 \n\nAfter edit, click save and upload the downloaded file in ./js/json on github page ")
       editElements.attr('contentEditable', true);
       editElements.css('border', '1px solid blue');
 }
@@ -22,7 +21,16 @@
       var editedContent = $(this).html();
       var key = 'newContent_' + pageId + '_' + (index + 1); // Include the pageId in the key
       localStorage.setItem(key, editedContent);
-      editedContents.push(editedContent);
+      var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+      var replacedContent = editedContent.replace(exp, function (match) {
+      var link = '<u><a href="' + match + '" class="link" target="_blank">' + match + '</a></u>';
+      if (editedContent.indexOf(link) === -1) {
+        return link;
+      } else {
+          return match;
+       }
+});
+      editedContents.push(replacedContent);
     });
   
     // Save the array of contents as a JSON string

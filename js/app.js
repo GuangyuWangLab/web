@@ -21,7 +21,17 @@
       var editedContent = $(this).html();
       var key = 'newContent_' + pageId + '_' + (index + 1); // Include the pageId in the key
       localStorage.setItem(key, editedContent);
-      editedContents.push(editedContent);
+      var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+      var replacedContent = editedContent.replace(exp, function (match) {
+      var link = '<u><a href="' + match + '" class="link">' + match + '</a></u>';
+      var existingLinkCheck = '<u><a href="' + match + '" class="link">';
+      if (editedContent.includes(existingLinkCheck)) {
+        return match;
+      } else {
+        return link;
+      }
+    });
+      editedContents.push(replacedContent);
     });
   
     // Save the array of contents as a JSON string

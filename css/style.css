@@ -344,14 +344,19 @@ margin-top: -80px;
   margin-top: 200px;
 } */
 .column1{
- margin-left: -50px;
+ margin-left: -120px;
  width: 500px;
 }
 .column2{
-  margin-left: 100px;
+  margin-left: 250px;
   width: 500px;
+
 }
-.long{
+.column1 .long{
+  margin-left: -100px;
+}
+
+.column2 .long{
   margin-left: -100px;
 }
 

@@ -308,14 +308,17 @@ header {
   width: 400px;
  }
 .sub-heading_double{
-  padding-top: 300px;
+  padding-top: 200px;
   font-weight: lighter;
   font-size: 25px;
   font-family: 'Source Serif Pro', serif;
 }
-.column1 .sub-heading_double{
+
+
+
+/* .column1 .sub-heading_double{
 margin-top: -80px;
-}
+} */
 
 .row {
   display: flex;
@@ -327,18 +330,19 @@ margin-top: -80px;
   flex: 50%;
 }
 .pic{
+  margin-top: 200px;
   border-radius: 30px;
   box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.5);
 }
 
-
+/* 
 .column1 .pic{
   margin-top: 220px;
 }
 
 .column2 .pic{
   margin-top: 200px;
-}
+} */
 .column1{
  margin-left: -50px;
  width: 500px;

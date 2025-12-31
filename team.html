@@ -1,158 +1,247 @@
 <!DOCTYPE html>
-<html lang="en" id="team">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!---<meta name="viewport" content="width=device-width, initial-scale=1.0">------>
-  <title>Team | Wang Lab </title>
-  <link rel="icon" type="image/x-icon" href="./assets/baby.ico">
-
-  <!-- --------- Footer --------- -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-  <!-- --------- CSS Files --------- -->
-  <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team | Wang Lab</title>
+    <meta name="description" content="Meet the team at Wang Lab.">
+    <link rel="icon" type="image/x-icon" href="./assets/baby.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-  <div class="transition transition-1 is-active"></div>
-    <header>
-      <!-- --------- Navbar --------- -->
-      <nav class="container">
-          
-        <div class="links" id="link">
-          <ul>
-            <li>
-              <a href="index.html" class="nav-link" >Home</a>
-            </li>
-            <li>
-              <a href="team.html" class="nav-link" >Team</a>
-            </li>
-            <li>
-              <a href="software.html" class="nav-link">Software</a>
-            </li>
-            <li>
-              <a href="publication.html" class="nav-link">Publications</a>
-            </li>
-            <li>
-              <a href="news.html" class="nav-link">News</a>
-            </li>
-            <li>
-              <a href="contact.html" class="nav-link">Contact</a>
-            </li>
-            <li>
-              <a href="open_position.html" class="nav-link">Open Position</a>
-            </li>
-          </ul>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">WANG LAB</div>
+            <div class="preloader-line"></div>
         </div>
-          
-      </nav>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">
+                    <span>WANG</span> LAB
+                </a>
+                <!-- Toggle Button for Mobile -->
+                <button class="navbar-toggle" type="button" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Collapsible Menu -->
+            <div class="navbar-collapse">
+                <div class="navbar-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="team.html" class="nav-link active">Team</a>
+                    <a href="software.html" class="nav-link">Software</a>
+                    <a href="publication.html" class="nav-link">Publications</a>
+                    <a href="news.html" class="nav-link">News</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="open_position.html" class="nav-link">Open Position</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="section" style="padding-bottom: 0; padding-top: 150px;">
+        <div class="container text-center">
+            <h1 class="section-title" style="margin-bottom: 1rem;">Our Team</h1>
+            <p class="hero-subtitle" style="color: var(--text-light); font-size: 1.2rem;">Meet the researchers behind
+                our
+                work.</p>
+        </div>
     </header>
 
-  <main>
-   
-    <div class="showcase-area" id="home" >
-      <div class="container ">
-        <div class="showcase-image " >
-            <!---<img src="./assets/baby.png" class="person" width="600" height="600">--->
-        
-        <video class="person" width="1600" height="1600" autoplay loop muted>
-            <source src="./assets/Untitled_1.mp4" type="video/mp4">
-            <img src="./assets/image.png" alt="Fallback image">
-        </video>
-      </div>
-        <div class="name2">
-            <h1 class="heading" id="heading-showcase"> <span>WANG</span> LAB</h1>
+    <!-- Team Grid -->
+    <main class="section">
+        <div class="container">
+            <!-- PI Section -->
+            <div class="pi-container">
+                <div class="pi-card">
+                    <div class="pi-image-wrapper">
+                        <img src="./assets/user.png" alt="Guangyu Wang, Ph.D." class="pi-image">
+                    </div>
+                    <div class="pi-content">
+                        <h2 class="pi-name">Guangyu Wang, Ph.D.</h2>
+                        <div class="pi-role">Principal Investigator</div>
+                        <div class="pi-bio">
+                            <p>
+                                
+                                <strong>Director</strong> of Center for Bioinformatics and Computational Biology (CB2).<br>
+                                
+                                <strong>Associate Professor</strong> of Computational Biology.<br>
+                                
+                                <strong>Associate Member</strong>, Research Institute, Houston Methodist / Weill Cornell Medical College.<br>
+                                
+                            </p>
+                            <p style="margin-top: 1rem;">
+                                Dr. Wang’s research focuses on integrating multi-omics such as scRNA-seq, spatial transcriptomics, and epigenetics to investigate the dynamics of cellular states and regulation mechanisms. He leads the lab in developing cutting-edge AI foundation models for biomedical research.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-grid">
+                
+                <div class="member-card">
+                    <img src="./assets/user.png" alt="Pengzhi Zhang"
+                        style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 0 auto 1rem; border: 3px solid var(--border-color);">
+                    <h3 class="member-name"
+                        style="font-size: 1.25rem; font-weight: 700; color: var(--secondary-color);">
+                        Pengzhi Zhang
+                    </h3>
+                    <div class="member-role">Research Associate</div>
+                    <div class="member-bio">
+                        Pengzhi received a Ph.D. degree in Physics at the University of Houston. He investigates the dynamic of cellular states and cell-cell communication using statistical inference and machine learning.
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <img src="./assets/user.png" alt="Tu (Alex) N Tran"
+                        style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 0 auto 1rem; border: 3px solid var(--border-color);">
+                    <h3 class="member-name"
+                        style="font-size: 1.25rem; font-weight: 700; color: var(--secondary-color);">
+                        Tu (Alex) N Tran
+                    </h3>
+                    <div class="member-role">Research Assistant</div>
+                    <div class="member-bio">
+                        Alex holds a Bachelor of Science in Mathematics with a minor in Finance. In Wang Lab, he manages GitHub, pipelines, and data servers, and contributes to collaborative projects with data analysis and visualization.
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <img src="./assets/user.png" alt="Weiqing Chen"
+                        style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 0 auto 1rem; border: 3px solid var(--border-color);">
+                    <h3 class="member-name"
+                        style="font-size: 1.25rem; font-weight: 700; color: var(--secondary-color);">
+                        Weiqing Chen
+                    </h3>
+                    <div class="member-role">Ph.D. Student</div>
+                    <div class="member-bio">
+                        Weiqing is a Ph.D. student at Weill Cornell Medicine interested in the intersection of machine learning/deep learning and single-cell dynamics/spatial biology, particularly RNA velocity and computational pathology.
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <img src="./assets/user.png" alt="Yiwei Xiao"
+                        style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 0 auto 1rem; border: 3px solid var(--border-color);">
+                    <h3 class="member-name"
+                        style="font-size: 1.25rem; font-weight: 700; color: var(--secondary-color);">
+                        Yiwei Xiao
+                    </h3>
+                    <div class="member-role">Postdoc Fellow</div>
+                    <div class="member-bio">
+                        Yiwei graduated from Peking University with a Ph.D. in Pathogen Organism. He focuses on using AI models to develop novel tools for image language and sequencing data.
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <img src="./assets/user.png" alt="Xiaohan (Hannah) Zhao"
+                        style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 0 auto 1rem; border: 3px solid var(--border-color);">
+                    <h3 class="member-name"
+                        style="font-size: 1.25rem; font-weight: 700; color: var(--secondary-color);">
+                        Xiaohan (Hannah) Zhao
+                    </h3>
+                    <div class="member-role">Ph.D. Student</div>
+                    <div class="member-bio">
+                        Xiaohan is a Ph.D. student at Weill Cornell Medicine, leveraging deep learning to tackle complex genomic problems. She holds a master’s degree in Bioinformatics from Fudan University.
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <img src="./assets/user.png" alt="Jian Sang"
+                        style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 0 auto 1rem; border: 3px solid var(--border-color);">
+                    <h3 class="member-name"
+                        style="font-size: 1.25rem; font-weight: 700; color: var(--secondary-color);">
+                        Jian Sang
+                    </h3>
+                    <div class="member-role">Research Associate</div>
+                    <div class="member-bio">
+                        JS received a Ph.D. in Bioinformatics from CAS. After postdoctoral training at NCI-DCEG (NIH), he joined Wang Lab to develop emerging models for Omics and Epidemiological insights.
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <img src="./assets/user.png" alt="Qing Li"
+                        style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 0 auto 1rem; border: 3px solid var(--border-color);">
+                    <h3 class="member-name"
+                        style="font-size: 1.25rem; font-weight: 700; color: var(--secondary-color);">
+                        Qing Li
+                    </h3>
+                    <div class="member-role">Postdoc Fellow</div>
+                    <div class="member-bio">
+                        Qing Li received a Ph.D. in computer science from CAS. She focuses on developing AI models for computational pathology, single-cell dynamics, and spatial biology.
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <img src="./assets/user.png" alt="Yuyan (Yolanda) Chen"
+                        style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 0 auto 1rem; border: 3px solid var(--border-color);">
+                    <h3 class="member-name"
+                        style="font-size: 1.25rem; font-weight: 700; color: var(--secondary-color);">
+                        Yuyan (Yolanda) Chen
+                    </h3>
+                    <div class="member-role">Postdoc Fellow</div>
+                    <div class="member-bio">
+                        Yuyan received a Ph.D. in Computer Science from Fudan University. She focuses on building large language and multimodal models for computational pathology and spatial biology.
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Alumni Section -->
+            <div class="text-center" style="margin-top: var(--spacing-xl);">
+                <h2 class="section-title" style="font-size: 2rem;">Lab Alumni</h2>
+                <div style="display: grid; gap: 1rem; max-width: 800px; margin: 0 auto; text-align: left;">
+                    
+                    <div
+                        style="background: var(--bg-white); padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                        <strong>Shengyu Li (2025)</strong> - PI in Houston Methodist, Weill Cornell Medical School
+                    </div>
+                    
+                    <div
+                        style="background: var(--bg-white); padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                        <strong>Ibrahem Kandel (2024)</strong> - AI Scientist, Grady Health System
+                    </div>
+                    
+                    <div
+                        style="background: var(--bg-white); padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                        <strong>Zeyu Yang (2023)</strong> - PhD student in Electrical and Computer Engineering, Rice University
+                    </div>
+                    
+                    <div
+                        style="background: var(--bg-white); padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                        <strong>Lingqun Ye (2022)</strong> - Associate Data Scientist, MD Anderson Cancer Center
+                    </div>
+                    
+                </div>
+            </div>
 
         </div>
-      </div>
-    </div>
-     <!-- --------- Member Area Section --------- -->
-    <!--EDIT TEXT HERE-->
-    <div class="members bggray" >
-      <div class="container ">
-        <div class="content">
-            <h1 class="heading edit" >LAB MEMBERS</h1>
-            <h2 class="sub-heading edit">
-             <span>Guangyu Wang</span>
-            </h2>
-            <p class="text edit">
-              Principle Investigator<br>
+    </main>
 
-              Assistant Professor Cardiovascular Sciences, Academic Institute<br>
-              Assistant Member, Research Institute<br>
-
-              Houston Methodist<br>
-              Weill Cornell Medical College<br><br>
-              Dr. Wang’s research focuses on integrating multi-omics such as scRNA-seq, spatial transcriptomics, and epigenetics to investigate the dynamics of cellular states, cell-cell communication, and the regulation mechanism in development and disease conditions, using cutting-edge computational techniques including deep learning, machine learning, and Bayesian inference.
-            </p>
-            <h2 class="sub-heading edit">
-             <span> Pengzhi Zhang</span>
-            </h2>
-            <p class="text edit">
-              Research Associate<br>
-              Pengzhi received a Ph.D. degree in Physics at the University of Houston. Pengzhi has a solid background in physics and worked as a research scientist for three years at the University of Houston. After joining Wang lab, he investigates the dynamic of cellular states and cell-cell communication.
-            </p>
-            <h2 class="sub-heading edit">
-             <span> Shengyu Li </span>
-            </h2>
-            <p class="text edit">
-              Postdoc Fellow<br>
-              Shengyu graduated from the University of South Alabama with a Ph.D. in Computer Science, with a four-year research and development experience in machine learning, natural language processing, and bioinformatics. After joining Wang lab, she focuses on developing AI models for profiling dynamic cell state transitions based on RNA velocity.
-            </p>
-            <h2 class="sub-heading edit">
-             <span> Ibrahem Hamdy Kandel</span>
-            </h2>
-            <p class="text edit">
-              Postdoc Fellow<br>
-              Ibrahem graduated from the New University of Lisbon with a Ph.D. in Information Management. He specialized in Machine Learning and Deep Learning with a strong focus on computer vision during his Ph.D. training. After joining the Wang lab, he focuses on developing novel algorithms for spatial transcriptome data.
-            </p>
-            <h2 class="sub-heading edit">
-              Tu (Alex) N Tran</span>
-            </h2>
-            <p class="text edit">
-              Research Assistant<br>
-              Alex is a bioinformatics Research Assistant with a strong background in mathematics and finance. He holds a Bachelor of Science in Mathematics with minor in Finance from the University of Massachusetts Lowell, where he achieved Dean's List honors. Alex has practical experience in data analysis and visualization, utilizing tools such as Python and R. Alex mainly responsible for managing Wang lab's GitHub, pipelines, and data on servers. He also has some small contribution to collaborate project by conducting data analysis and visualization tasks, ensuring accurate and reliable results. With a meticulous and detail-oriented approach, Alex leverages his skills in problem-solving and critical thinking to deliver valuable insights in the field of bioinformatics.
-            </p>
-            <h2 class="sub-heading edit">
-              <span>Weiqing Chen</span>
-            </h2>
-            <p class="text edit">
-              Weiqing is a first-year Ph.D. student at Weill Cornell Medicine. She is interested in problems at the intersection of machine learning/deep learning and single-cell dynamics/spatial biology, particularly in RNA velocity and computational pathology. <br> <br>
-
-Previously, Weiqing was a master’s student at Graduate School of Biostudies (SGU Program), Kyoto University, where she worked on Active Inference, advised by Naoki Honada. Before joining KU, she obtained her bachelor’s degree in computer science from Nanjing University of Posts and Telecommunications.
-            </p>
-            
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/GuangyuWangLab2021" class="social-link" aria-label="GitHub"><i
+                        class="fa fa-github"></i></a>
+                <a href="https://twitter.com/WangLab_Method" class="social-link" aria-label="Twitter"><i
+                        class="fa fa-twitter"></i></a>
+                <a href="mailto:guangyu.wang@houstonmethodist.org" class="social-link" aria-label="Email"><i
+                        class="fa fa-envelope"></i></a>
+            </div>
+            <p class="footer-text">&copy; 2023 Wang Lab. Design by Tu (Alex) N Tran.</p>
         </div>
-      </div>
-    </div>
-    
-  
-    
-  </main>
-
-  <footer>
-    <!-- --------- Footer --------- -->
-    <div class="foot">
-      <div class="container ">
-      
-      <a href="https://github.com/GuangyuWangLab2021" class="fa fa-github" style="font-size:24px"></a> <a href="https://www.linkedin.com/in/guangyu-wang-27696819b/" class="fa fa-linkedin-square" style="font-size:24px"></a><a href="https://twitter.com/Guangyu_Wang01" class="fa fa-twitter" style="font-size:24px"></a>
-      <p class="text">©2023 by Wang lab.</p>
-      <p class="text text2">Design by Tu (Alex) N Tran.</p>
-      
-    </div>
-    <button id="edit" onclick="myFunction()">edit</button>
-    <button id="edit" onclick="mySave()">save</button>
-  </div>
-  
-  </footer>
-
-  <!-- JavaScript Files -->
-  <script src="./js/jquery.js" type="text/javascript"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="./js/app.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    </footer>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

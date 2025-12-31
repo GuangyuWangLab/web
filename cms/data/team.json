@@ -1,0 +1,69 @@
+{
+    "alumni": [
+        "<strong>Shengyu Li (2025)</strong> - PI in Houston Methodist, Weill Cornell Medical School",
+        "<strong>Ibrahem Kandel (2024)</strong> - AI Scientist, Grady Health System",
+        "<strong>Zeyu Yang (2023)</strong> - PhD student in Electrical and Computer Engineering, Rice University",
+        "<strong>Lingqun Ye (2022)</strong> - Associate Data Scientist, MD Anderson Cancer Center"
+    ],
+    "members": [
+        {
+            "bio": "Pengzhi received a Ph.D. degree in Physics at the University of Houston. He investigates the dynamic of cellular states and cell-cell communication using statistical inference and machine learning.",
+            "image": "./assets/user.png",
+            "name": "Pengzhi Zhang",
+            "role": "Research Associate"
+        },
+        {
+            "bio": "Alex holds a Bachelor of Science in Mathematics with a minor in Finance. In Wang Lab, he manages GitHub, pipelines, and data servers, and contributes to collaborative projects with data analysis and visualization.",
+            "image": "./assets/user.png",
+            "name": "Tu (Alex) N Tran",
+            "role": "Research Assistant"
+        },
+        {
+            "bio": "Weiqing is a Ph.D. student at Weill Cornell Medicine interested in the intersection of machine learning/deep learning and single-cell dynamics/spatial biology, particularly RNA velocity and computational pathology.",
+            "image": "./assets/user.png",
+            "name": "Weiqing Chen",
+            "role": "Ph.D. Student"
+        },
+        {
+            "bio": "Yiwei graduated from Peking University with a Ph.D. in Pathogen Organism. He focuses on using AI models to develop novel tools for image language and sequencing data.",
+            "image": "./assets/user.png",
+            "name": "Yiwei Xiao",
+            "role": "Postdoc Fellow"
+        },
+        {
+            "bio": "Xiaohan is a Ph.D. student at Weill Cornell Medicine, leveraging deep learning to tackle complex genomic problems. She holds a master\u2019s degree in Bioinformatics from Fudan University.",
+            "image": "./assets/user.png",
+            "name": "Xiaohan (Hannah) Zhao",
+            "role": "Ph.D. Student"
+        },
+        {
+            "bio": "JS received a Ph.D. in Bioinformatics from CAS. After postdoctoral training at NCI-DCEG (NIH), he joined Wang Lab to develop emerging models for Omics and Epidemiological insights.",
+            "image": "./assets/user.png",
+            "name": "Jian Sang",
+            "role": "Research Associate"
+        },
+        {
+            "bio": "Qing Li received a Ph.D. in computer science from CAS. She focuses on developing AI models for computational pathology, single-cell dynamics, and spatial biology.",
+            "image": "./assets/user.png",
+            "name": "Qing Li",
+            "role": "Postdoc Fellow"
+        },
+        {
+            "bio": "Yuyan received a Ph.D. in Computer Science from Fudan University. She focuses on building large language and multimodal models for computational pathology and spatial biology.",
+            "image": "./assets/user.png",
+            "name": "Yuyan (Yolanda) Chen",
+            "role": "Postdoc Fellow"
+        }
+    ],
+    "pi": {
+        "bio_points": [
+            "<strong>Director</strong> of Center for Bioinformatics and Computational Biology (CB2).",
+            "<strong>Associate Professor</strong> of Computational Biology.",
+            "<strong>Associate Member</strong>, Research Institute, Houston Methodist / Weill Cornell Medical College."
+        ],
+        "description": "Dr. Wang\u2019s research focuses on integrating multi-omics such as scRNA-seq, spatial transcriptomics, and epigenetics to investigate the dynamics of cellular states and regulation mechanisms. He leads the lab in developing cutting-edge AI foundation models for biomedical research.",
+        "image": "./assets/user.png",
+        "name": "Guangyu Wang, Ph.D.",
+        "role": "Principal Investigator"
+    }
+}

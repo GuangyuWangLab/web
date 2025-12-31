@@ -1,0 +1,189 @@
+[
+    {
+        "category": "Feature Publications",
+        "entries": [
+            {
+                "citation": "Shengyu Li#, <b>Pengzhi Zhang#, Weiqing Chen</b> , Lingqun Ye, Kristopher W. Brannan, Nhat-Tu Le, Jun-ichi Abe, John P. Cooke<b>, Guangyu Wang</b>. A relay velocity model infers cell-dependent RNA velocity. Nature Biotechnology (2023)",
+                "link": "https://doi.org/10.1038/s41587-023-01728-5"
+            },
+            {
+                "citation": "<b>Pengzhi Zhang, Guangyu Wang</b>. Uncovering cell cycle speed modulations with statistical inference. Nature Methods (2024)",
+                "link": "https://doi.org/10.1038/s41592-024-02484-3"
+            },
+            {
+                "citation": "<b>Weiqing Chen#</b>, <b>Pengzhi Zhang#, Tu N Tran, Yiwei Xiao, Shengyu Li, </b>Vrutant V. Shah, Hao Cheng, Kristopher W. Brannan, Keith Youker, Li Lai, Longhou Fang, Yu Yang, Nhat-Tu Le, Jun-ichi Abe, Shu-Hsia Chen, Qin Ma, Ken Chen, Qianqian Song, John P. Cooke, <b>Guangyu Wang</b>. A visual\u2013omics foundation model to bridge histopathology with spatial transcriptomics. Nature Methods (2025)",
+                "link": "https://doi.org/10.1038/s41592-025-02707-1"
+            },
+            {
+                "citation": "<b>Pengzhi Zhang#</b>, <b>Weiqing Chen#</b>, <b>Tu N Tran</b>, Minghao Zhou, Kaylee N. Carter, <b>Ibrahem Kandel</b>, <b>Shengyu Li</b>, Xen Ping Hoi, Yuxing Sun, Li Lai, Keith Youker, Qianqian Song, Yu Yang, Fotis Nikolos, Zejuan Li, Keith Syson Chan, John P. Cooke, <b>Guangyu Wang</b>. Thor: a platform for cell-level investigation of spatial transcriptomics and histology. Nature Communications (2025)",
+                "link": "https://doi.org/10.1038/s41467-025-62593-1"
+            },
+            {
+                "citation": "Jun-ichi Abe#, Masaki Imanishi#, <b>Shengyu Li</b>#, Aijun Zhang, Kyung Ae Ko, Venkata S.K. Samanthapudi, Ling-Ling Lee, Angelica Paniagua Bojorges, Young Jin Gi, Brian P. Hobbs, Anita Deswal, Joerg Herrmann, Steven H. Lin, Eduardo N. Chini, Ying H. Shen, Keri L. Schadler, Thi-Hong-Minh Nguyen, Anisha A. Gupte, Cielito Reyes-Gibby, Sai-Ching J. Yeung, Rei J. Abe, Elizabeth A. Olmsted-Davis, Sunil Krishnan, Robert Dantzer, Nicolas L. Palaskas, John P. Cooke, Henry J. Pownall, Momoko Yoshimoto, Keigi Fujiwara, Dale J. Hamilton, Jared K. Burks, <b>Guangyu Wang</b>*, Nhat-Tu Le* and Sivareddy Kotla*. An ERK5-NRF2 Axis Mediates Senescence-Associated Stemness and Atherosclerosis. Circulation Research (2023)",
+                "link": "https://doi.org/10.1161/circresaha.122.322017"
+            }
+        ]
+    },
+    {
+        "category": "2022-2025",
+        "entries": [
+            {
+                "citation": "Qing Wang#, Yining Pan#, Minghao Zhou#, Zijia Tang, Yanfei Wang, <b>Guangyu Wang</b> & Qianqian Song. scDrugMap: benchmarking large foundation models for drug response prediction. Nature Communications (2025).",
+                "link": "https://doi.org/10.1038/s41467-025-67481-2"
+            },
+            {
+                "citation": "Jun-dae Kim#, Surbhi Chaudhary#, <b>Weiqing Chen</b>, Jonathan Astin, Philip S. Crosier, Pengchun Yu, John P. Cooke, Henry J. Pownall, Hugo J. Bellen, Nhat-Tu Le, Daniel L. Kiss, <b>Guangyu Wang</b>, Stanley G. Rockson, Hong Chen & Longhou Fang. APOA1 binding protein promotes lymphatic cell fate and lymphangiogenesis by relieving caveolae-mediated inhibition of VEGFR3 signaling. Nature Communications (2025) 16:9286.",
+                "link": "https://doi.org/10.1038/s41467-025-60611-w"
+            },
+            {
+                "citation": "<b>Pengzhi Zhang#</b>, <b>Weiqing Chen#</b>, <b>Tu N Tran</b>, Minghao Zhou, Kaylee N. Carter, <b>Ibrahem Kandel</b>, <b>Shengyu Li</b>, Xen Ping Hoi, Yuxing Sun, Li Lai, Keith Youker, Qianqian Song, Yu Yang, Fotis Nikolos, Zejuan Li, Keith Syson Chan, John P. Cooke, <b>Guangyu Wang</b>. Thor: a platform for cell-level investigation of spatial transcriptomics and histology. Nature Communications (2025)",
+                "link": "https://doi.org/10.1038/s41467-025-62593-1"
+            },
+            {
+                "citation": "<b>Weiqing Chen#</b>, <b>Pengzhi Zhang#, Tu N Tran, Yiwei Xiao, Shengyu Li, </b>Vrutant V. Shah, Hao Cheng, Kristopher W. Brannan, Keith Youker, Li Lai, Longhou Fang, Yu Yang, Nhat-Tu Le, Jun-ichi Abe, Shu-Hsia Chen, Qin Ma, Ken Chen, Qianqian Song, John P. Cooke, <b>Guangyu Wang</b>. A visual\u2013omics foundation model to bridge histopathology with spatial transcriptomics. Nature Methods (2025)",
+                "link": "https://doi.org/10.1038/s41592-025-02707-1"
+            },
+            {
+                "citation": "Fei Han#, Summer Simeroth#, Jie Zhu, Irma Gryniuk, Atul Pranay, <b>Weiqing Chen</b>, Yuan Wang, Yuanyuan Cai, Zhiyuan Shen, <b>Guangyu Wang</b>, Courtney T. Griffin, Lijun Xia, Pengchun Yu. Lymphatic endothelial mTORC1 instructs metabolic and developmental signaling during lymphangiogenesis. Developmental Cell (2025)",
+                "link": "https://doi.org/10.1016/j.devcel.2025.04.012"
+            },
+            {
+                "citation": "<b>Pengzhi Zhang, Guangyu Wang</b>. Uncovering cell cycle speed modulations with statistical inference. Nature Methods (2024)",
+                "link": "https://doi.org/10.1038/s41592-024-02484-3"
+            },
+            {
+                "citation": "Priyanka Banerjee, Khanh Chau, Sivareddy Kotla, Eleanor L Davis, Estefani Berrios Turcios, <b>Shengyu Li</b>, <b>Pengzhi Zhang</b>, <b>Guangyu Wang</b>, Gopi Krishna Kolluru, Abhishek Jain, John P Cooke, Junichi Abe, Nhat-Tu Le. A Potential Role for MAGI-1 in the Bi-Directional Relationship Between Major Depressive Disorder and Cardiovascular Disease. Current Atherosclerosis Reports. (2024)",
+                "link": "https://doi.org/10.1007/s11883-024-01223-5"
+            },
+            {
+                "citation": "Sudipto Baul, Khandakar Tanvir Ahmed, Qibing Jiang, <b>Guangyu Wang</b>, Qian Li, Jeongsik Yong, Wei Zhang*. Integrating spatial transcriptomics and bulk RNA-seq: predicting gene expression with enhanced resolution through graph attention networks. Briefings in Bioinformatics. (2024)",
+                "link": "https://doi.org/10.1093/bib/bbae316"
+            },
+            {
+                "citation": "Khanh M Chau#, Abishai Dominic#, Eleanor L Davis, Sivareddy Kotla, Estefani Turcios Berrios, Arsany Fahim, Ashwin Arunesh, <b>Shengyu Li</b>, Dongyu Zhao, Kaifu Chen, Alan R Davis, Minh TH Nguyen, Yongxing Wang, Scott E Evans, <b>Guangyu Wang</b>, John P Cooke, Jun-ichi Abe, David P Huston, Nhat-Tu Le*. TNIK regulation of interferon signaling and endothelial cell response to virus infection. Frontiers in Cardiovascular Medicine. (2024)",
+                "link": "https://doi.org/10.3389/fcvm.2023.1213428"
+            },
+            {
+                "citation": "Bo Li, Yong Zhan*, Qing Wang, Chengyang Zhang, Mengran Li, <b>Guangyu Wang</b>, Qianqian Song*. Gene Expression Prediction from Histology Images via Hypergraph Neural Networks. bioRxiv. (2024)",
+                "link": "https://doi.org/10.1101/2024.08.05.606608"
+            },
+            {
+                "citation": "Abhijit Chakraborty#, Yanming Li#, Chen Zhang#, Yang Li, Kimberly R. Rebello, <b>Shengyu Li</b>, Samantha Xu, Hernan G. Vasquez, Lin Zhang, Wei Luo, <b>Guangyu Wang</b>, Kaifu Chen, Joseph S. Coselli, Scott A. LeMaire, Ying H. Shen. Epigenetic Induction of Smooth Muscle Cell Phenotypic Alterations in Aortic Aneurysms and Dissections. Circulation (2023)",
+                "link": "https://doi.org/10.1161/circulationaha.123.063332"
+            },
+            {
+                "citation": "Hua Mao#, Aude Angelini#, <b>Shengyu Li#, Guangyu Wang</b>, Luge Li, Cam Patterson, Xinchun Pi & Liang Xie. CRAT links cholesterol metabolism to innate immune responses in the heart. Natural Metabolism (2023)",
+                "link": "https://doi.org/10.1038/s42255-023-00844-5"
+            },
+            {
+                "citation": "Jun-ichi Abe#, Masaki Imanishi#, <b>Shengyu Li</b>#, Aijun Zhang, Kyung Ae Ko, Venkata S.K. Samanthapudi, Ling-Ling Lee, Angelica Paniagua Bojorges, Young Jin Gi, Brian P. Hobbs, Anita Deswal, Joerg Herrmann, Steven H. Lin, Eduardo N. Chini, Ying H. Shen, Keri L. Schadler, Thi-Hong-Minh Nguyen, Anisha A. Gupte, Cielito Reyes-Gibby, Sai-Ching J. Yeung, Rei J. Abe, Elizabeth A. Olmsted-Davis, Sunil Krishnan, Robert Dantzer, Nicolas L. Palaskas, John P. Cooke, Henry J. Pownall, Momoko Yoshimoto, Keigi Fujiwara, Dale J. Hamilton, Jared K. Burks, <b>Guangyu Wang*</b>, Nhat-Tu Le*, Sivareddy Kotla*. An ERK5-NRF2 Axis Mediates Senescence-Associated Stemness and Atherosclerosis. Circulation Research (2023)",
+                "link": "https://doi.org/10.1161/circresaha.122.322017"
+            },
+            {
+                "citation": "Hannah Savage, Sumedha Pareek, Jonghae Lee, Riccardo Ballar\u00f2, Darlan Conterno Minussi, Karma Hayek, Mumina Sadullozada, Brooke S Lochmann, Jennifer L McQuade, Emily C LaVoy, Enrica Marmonti, Hetal Patel, <b>Guangyu Wang</b>, Masaki Imanishi, Sivareddy Kotla, Jun-ichi Abe, Keri L Schadler. Aerobic exercise alters the melanoma microenvironment and modulates ERK5 S496 phosphorylation. American Association for Cancer Research (2023)",
+                "link": "https://doi.org/10.1158/2326-6066.CIR-22-0465"
+            },
+            {
+                "citation": "Priyanka Banerjee, Julia Enterr\u00eda Rosales, Khanh Chau, Minh TH Nguyen, Sivareddy Kotla, Steven H Lin, Anita Deswal, Robert Dantzer, Elizabeth A Olmsted-Davis, Hung Nguyen, <b>Guangyu Wang</b>, John P Cooke, Jun-ichi Abe, Nhat-Tu Le. Possible molecular mechanisms underlying the development of atherosclerosis in cancer survivors. Frontiers (2023)",
+                "link": "https://doi.org/10.3389/fcvm.2023.1186679"
+            },
+            {
+                "citation": "Shengyu Li#, <b>Pengzhi Zhang#, Weiqing Chen</b> , Lingqun Ye, Kristopher W. Brannan, Nhat-Tu Le, Jun-ichi Abe, John P. Cooke<b>, Guangyu Wang</b>. A relay velocity model infers cell-dependent RNA velocity. Nature Biotechnology (2023)",
+                "link": "https://www.nature.com/articles/s41587-023-01728-5"
+            },
+            {
+                "citation": "Zhou P, VanDusen NJ, Zhang Y, Cao Y, Sethi I, Hu R, Zhang S, <b>Wang G</b>, Ye L, Mazumdar N, Chen J, Zhang X, Guo Y, Li B, Ma Q, Lee JY, Gu W, Yuan GC, Ren B, Chen K, Pu WT. Dynamic changes in P300 enhancers and enhancer-promoter contacts control mouse cardiomyocyte maturation. Dev Cell. 2023",
+                "link": "https://pubmed.ncbi.nlm.nih.gov/37071996/"
+            },
+            {
+                "citation": "Jie Lv, Shu Meng, Qilin Gu, Rongbin Zheng, Xinlei Gao, Jun-dae Kim, Min Chen, Bo Xia, Yihan Zuo, Sen Zhu, Dongyu Zhao, Yanqiang Li, <b>Guangyu Wang</b>, Xin Wang, Qingshu Meng, Qi Cao, John P Cooke, Longhou Fang, Kaifu Chen, Lili Zhang. Epigenetic landscape reveals MECOM as an endothelial lineage regulator. Nat Commun 14, 2390 (2023)",
+                "link": "https://doi.org/10.1038/s41467-023-38002-w"
+            },
+            {
+                "citation": "Krishan Gupta#, <b>Guangyu Wang</b>#, Shuo Zhang#, Xinlei Gao, Rongbin Zheng, Yanchun Zhang, Qingshu Meng, Lili Zhang, Qi Cao, Kaifu Chen. StripeDiff: Model-based Algorithm for Differential Analysis of Chromatin Stripe. Science Advances. (2022)",
+                "link": "#"
+            }
+        ]
+    },
+    {
+        "category": "2015-2021",
+        "entries": [
+            {
+                "citation": "Anahita Mojiri, Brandon K Walther, Chongming Jiang, Gianfranco Matrone, Rhonda Holgate, Qiu Xu, Elisa Morales, <b>Guangyu Wang</b>, Jianhua Gu, Rongfu Wang, John P Cooke. Telomerase therapy reverses vascular senescence and extends lifespan in progeria mice. European Heart Journal. (2021)",
+                "link": "#"
+            },
+            {
+                "citation": "<b>Guangyu Wang</b>#, Bo Xia#, Joe Lv, Dongyu Zhao, Yanqiang Li, Yiwen Bu, Xin Wang, John P. Cooke, Qi Cao, Min Gyu Lee, Lili Zhang, Kaifu Chen. MACMIC reveals dual role of CTCF in epigenetic regulation of cell identity genes. Genomics, Proteomics, and Bioinformatics. (2021)",
+                "link": "#"
+            },
+            {
+                "citation": "<b>Guangyu Wang</b>, Qingshu Meng, Bo Xia, Shuo Zhang, Jie Lv, Dongyu Zhao, Yanqiang Li, Xin Wang, Lili Zhang, John P. Cooke, Qi Cao, Kaifu Chen. TADsplimer reveals splits and mergers of topologically associating domains for epigenetic regulation of transcription. Genome Biology. (2020)",
+                "link": "#"
+            },
+            {
+                "citation": "Bo Xia#, Dongyu Zhao#, <b>Guangyu Wang</b>#, Min Zhang, Jie Lv, Alin S. Tomoiaga, Yanqiang Li, Xin Wang, Shu Meng, John P. Cooke, Qi Cao, Lili Zhang, Kaifu Chen. Machine Learning uncovers cell identity regulator by histone code. Nature Communication. (2020)",
+                "link": "#"
+            },
+            {
+                "citation": "Dongyu Zhao#, Lili Zhang#, Min Zhang, Bo Xia, Jie Lv, <b>Guangyu Wang</b>, Qingshu Meng, Yang Yi, Sen Zhu, Alin S. Tomoiaga, Min Gyu Lee, John P. Cooke, Qi Cao, Kaifu Chen. Widespread H3K27me3 Signifies Super Repression Domains for Enhanced Silencing of Oncogenes. Nature Communication. (2020)",
+                "link": "#"
+            },
+            {
+                "citation": "<b>Guangyu Wang</b>, Ana Sofia Cruz, Keith Youker, Hernan G Marcos-Abdala, Rajarajan A Thandavarayan, John P Cooke, Guillermo Torre-Amione, Kaifu Chen, Arvind Bhimaraj. Role of Endothelial and Mesenchymal cell transitions in heart failure and recovery thereafter. Frontiers in Genetics. (2020)",
+                "link": "#"
+            },
+            {
+                "citation": "Lin Liu#, <b>Guangyu Wang</b>#, Liguo Wang, Chunlei Yu, Mengwei Li, Shuhui Song, Lili Hao, Lina Ma, Zhang Zhang. Computational identification and characterization of glioma candidate biomarkers through multi-omics integrative profiling. Biology direct. (2020)",
+                "link": "#"
+            },
+            {
+                "citation": "Qiaqia Li#, Kilia Y. Liu#, Qipeng Liu#, <b>Guangyu Wang</b>#, Weihua Jiang, Qingshu Meng, Yang Yi, Yongyong Yang, Rui Wang, Sen Zhu, Chao Li, Lin Yan, Lili Zhang, Jung-Sun Kim, Xiongbing Zu, Jenny Chang, Anthony Kozielski, Wei Qian, Kaifu Chen, Qi Cao. Antihistamine Drug Ebastine inhibits cancer growth by targeting Polycomb Group Protein EZH2. Molecular Cancer Therapeutics. (2020)",
+                "link": "#"
+            },
+            {
+                "citation": "<b>Guangyu Wang</b>, Hongyan Yin, Boyang Li, Chunlei Yu, Fan Wang, Xingjian Xu, Jiabao Cao, Yiming Bao, Liguo Wang, Amir A Abbasi, Vladimir B Bajic, Lina Ma, Zhang Zhang. Characterization and identification of long noncoding RNAs based on feature relationship. Bioinformatics. (2019)",
+                "link": "#"
+            },
+            {
+                "citation": "Qipeng Liu#, <b>Guangyu Wang</b>#, Qiaqia Li#, Weihua Jiang, Jung-sun Kim, Rui Wang, Sen Zhu, Xiaoju Wang, Lin Yan, Yang Yi, Lili Zhang, Qingshu Meng, Chao Li, Yuanyuan Qiao, Yong Li, Demirkan B. Gursel, Arul M. Chinnaiyan, Kaifu Chen, Qi Cao. Polycomb group proteins EZH2 and EED directly regulate androgen receptor in advanced prostate cancer. International Journal of Cancer. (2019)",
+                "link": "#"
+            },
+            {
+                "citation": "Long Zhi, Yinan Li, Gan Yu, Zhao Dongyu, <b>Guangyu Wang</b>, Xie Ning, Lovnicki Jessica M, Fali Ladan, Cao Qi, Chen Kaifu, Dong Xuesen. Roles of the HOXA10 Gene during Castrate Resistant Prostate Cancer Progression. Endocrine-Related Cancer. (2019)",
+                "link": "#"
+            },
+            {
+                "citation": "Sen Zhu, Dongyu Zhao, Chao Li, Qiaqia Li, Weihua Jiang, Qipeng Liu, Rui Wang, Ladan Fazli, Yinan Li, Lili Zhang, Yang Yi, Qingshu Meng, Wanyi Wang, <b>Guangyu Wang</b>, Min Zhang, Xiongbing Zu, Wei Zhao, Tuo Deng, Jindan Yu, Xuesen Dong, Kaifu Chen, Qi Cao. BMI1 is directly regulated by androgen receptor to promote castration-resistance in prostate cancer. Oncogene (2019)",
+                "link": "#"
+            },
+            {
+                "citation": "Yang Yu#, Nhung Pham#, Bo Xia#, Alma Papusha, <b>Guangyu Wang</b>, Zhenxin Yan, Guang Peng, Kaifu Chen, Grzegorz Ira. Dna2 nuclease deficiency results in large and complex DNA insertions at chromosomal breaks. Nature. (2018)",
+                "link": "#"
+            },
+            {
+                "citation": "<b>Guangyu Wang</b># listed in BIG Data Center Members (2017) Database resources of the BIG Data Center in 2018. Nucleic Acids Res. (2018)",
+                "link": "#"
+            },
+            {
+                "citation": "<b>Guangyu Wang</b># listed in BIG Data Center Members (2017) The BIG Data Center: from deposition to integration to translation. Nucleic Acids Res. (2017)",
+                "link": "#"
+            },
+            {
+                "citation": "Hongyan Yin#, <b>Guangyu Wang</b>#, Lina Ma, Soojin V. Yi, Zhang Zhang. What Signatures Dominantly Associate with Gene Age? Genome biology and evolution. (2016)",
+                "link": "#"
+            },
+            {
+                "citation": "Hongyan Yin, Lina Ma, <b>Guangyu Wang</b>#, Mengwei Li, Zhang Zhang. Old genes experience stronger translational selection than young genes. Gene. (2016)",
+                "link": "#"
+            },
+            {
+                "citation": "<b>Guangyu Wang</b>, Shixiang Sun, Zhang Zhang. Randomness in Sequence Evolution Increases over Time. PLoS One. (2016)",
+                "link": "#"
+            },
+            {
+                "citation": "Cheng Xu#, Hongzhu Qu#, <b>Guangyu Wang</b>#, Bingbing Xie, Yi Shi, Yang Yang, Zheng Zhao, Lagabaiyila Zha, Wei Zhu, Pingming Qiu, Shujin Li, Zhang Zhang, Chengtao Li. A novel strategy for forensic age prediction by DNA methylation and support vector regression model. Scientific reports. (2015)",
+                "link": "#"
+            }
+        ]
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "description": "To apply for a position, please send a CV, cover letter or research statement, and information for three references to the PI, Guangyu Wang, PhD (<a href=\"mailto:gwang2@houstonmethodist.org\" style=\"color: var(--primary-color);\">gwang2@houstonmethodist.org</a>).",
+        "qualifications": [
+            "Applicants must have training in an area related to bioinformatics.",
+            "Experiences with algorithm development and analysis of multiple high-dimension datasets will be a strong plus.",
+            "Candidates with a PhD degree in biology, medicine, genomics, bioinformatics, computer science, electronics engineering, mathematics, statistics, physics, or other related areas are encouraged to apply."
+        ],
+        "title": "Postdocs",
+        "type": "Full-time"
+    },
+    {
+        "description": "We have openings for motivated undergraduate and graduate students from various scientific disciplines (biology, medicine, statistics, engineering, etc) who wish to work at the interface of genomics, bioinformatics and medicine. <br><br> Please contact <a href=\"mailto:gwang2@houstonmethodist.org\" style=\"color: var(--primary-color);\">gwang2@houstonmethodist.org</a> for more information.",
+        "qualifications": [],
+        "title": "Graduate & Undergraduate Students",
+        "type": "Internship / Thesis"
+    }
+]

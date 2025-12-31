@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Wang Lab</title>
+    <meta name="description" content="Research publications from Wang Lab.">
+    <link rel="icon" type="image/x-icon" href="./assets/baby.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">WANG LAB</div>
+            <div class="preloader-line"></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">
+                    <span>WANG</span> LAB
+                </a>
+                <!-- Toggle Button for Mobile -->
+                <button class="navbar-toggle" type="button" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Collapsible Menu -->
+            <div class="navbar-collapse">
+                <div class="navbar-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="team.html" class="nav-link">Team</a>
+                    <a href="software.html" class="nav-link">Software</a>
+                    <a href="publication.html" class="nav-link active">Publications</a>
+                    <a href="news.html" class="nav-link">News</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="open_position.html" class="nav-link">Open Position</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="section" style="padding-bottom: 0; padding-top: 150px;">
+        <div class="container text-center">
+            <h1 class="section-title" style="text-align: center !important; margin-bottom: 1rem;">Publications</h1>
+            <p class="hero-subtitle" style="color: var(--text-light); font-size: 1rem;">*Note: "#" first author, "*"
+                senior
+                author</p>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <div class="publication-container">
+
+                {% for section in publications %}
+                <h2
+                    class="section-title pub-category-title {% if section.category != 'Feature Publications' %}bordered{% endif %}">
+                    {{ section.category }}
+                </h2>
+
+                {% for pub in section.entries %}
+                <div class="pub-card">
+                    • {{ pub.citation|safe }}
+                    <div style="margin-top:0.5rem;">
+                        <a href="{{ pub.link }}" class="pub-btn" target="_blank">View Paper</a>
+                    </div>
+                </div>
+                {% endfor %}
+
+                {% endfor %}
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/GuangyuWangLab2021" class="social-link" aria-label="GitHub"><i
+                        class="fa fa-github"></i></a>
+                <a href="https://twitter.com/WangLab_Method" class="social-link" aria-label="Twitter"><i
+                        class="fa fa-twitter"></i></a>
+                <a href="mailto:guangyu.wang@houstonmethodist.org" class="social-link" aria-label="Email"><i
+                        class="fa fa-envelope"></i></a>
+            </div>
+            <p class="footer-text">&copy; 2023 Wang Lab. Design by Tu (Alex) N Tran.</p>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

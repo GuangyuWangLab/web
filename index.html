@@ -1,214 +1,161 @@
 <!DOCTYPE html>
-<html lang="en" id="index">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!---<meta name="viewport" content="width=device-width, initial-scale=1.0">------>
-  <title>Bioinformatics | Guangyu Wang Lab</title>
-  <meta name="x-capsule" content="none">
-  <link rel="icon" type="image/x-icon" href="./assets/baby.ico">
-
-
-  <!-- --------- Footer --------- -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-  <meta name="google-site-verification" content="dJS-9JRigynygsYem5lQ28eNd-sQ43KlHGYM2QSSiSo" />
-
-  <!-- --------- CSS Files --------- -->
-  <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wang Lab | Computational Biology & Bioinformatics</title>
+    <meta name="description"
+        content="Wang Lab at Houston Methodist / Weill Cornell Medical College. Focusing on multi-omics, AI, and spatial biology.">
+    <link rel="icon" type="image/x-icon" href="./assets/baby.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-  <div class="transition transition-1 is-active"></div>
-    <header>
-      <!-- --------- Navbar --------- -->
-      <nav class="container">
-    
-        <div class="links" id="link">
-          <ul>
-            <li>
-              <a href="index.html" class="nav-link" >Home</a>
-            </li>
-            <li>
-              <a href="team.html" class="nav-link" >Team</a>
-            </li>
-            <li>
-              <a href="software.html" class="nav-link">Software</a>
-            </li>
-            <li>
-              <a href="publication.html" class="nav-link">Publications</a>
-            </li>
-            <li>
-              <a href="news.html" class="nav-link">News</a>
-            </li>
-            <li>
-              <a href="contact.html" class="nav-link">Contact</a>
-            </li>
-            <li>
-              <a href="open_position.html" class="nav-link">Open Position</a>
-            </li>
-          </ul>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">WANG LAB</div>
+            <div class="preloader-line"></div>
         </div>
-          
-      </nav>
-    </header>
+    </div>
 
-    <main>
-     
-    <!-- --------- Showcase Area Section --------- -->
-    <div class="showcase-area" id="home" >
-      <div class="container ">
-        <div class="showcase-image " >
-            <!---<img src="./assets/baby.png" class="person" width="600" height="600">--->
-        
-        <video id="video" class="person" width="1600" height="1600" autoplay loop muted>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand" style="visibility: hidden;">
+                    <span>WANG</span> LAB
+                </a>
+                <!-- Toggle Button for Mobile -->
+                <button class="navbar-toggle" type="button" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Collapsible Menu -->
+            <div class="navbar-collapse">
+                <div class="navbar-nav">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="team.html" class="nav-link">Team</a>
+                    <a href="software.html" class="nav-link">Software</a>
+                    <a href="publication.html" class="nav-link">Publications</a>
+                    <a href="news.html" class="nav-link">News</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="open_position.html" class="nav-link">Open Position</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video class="hero-video" autoplay loop muted playsinline>
             <source src="./assets/umap2_try.mp4" type="video/mp4">
-            <img src="./assets/image.png" alt="Fallback image">
         </video>
-       
-      </div>
-      
-        <div class="name">
-            <h1 class="heading" > <span>WANG</span> LAB</h1>
-            
+        <div class="hero-overlay"></div>
+        <div class="hero-perspective-wrapper">
+            <div class="hero-content">
+                <div class="hero-brand-logo">
+                    <span class="brand-box">WANG</span> <span class="brand-text">LAB</span>
+                </div>
+                <p class="hero-subtitle">Computational Biology and Bioinformatics</p>
+                <a href="#research" class="btn hero-btn">Explore Our Research</a>
+            </div>
         </div>
-        <div class="heading_small">
-          <h2 class="sub-heading">Computational Biology and Bioinformatics</h2>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="section">
+        <div class="container">
+            <h2 class="section-title">Research Areas</h2>
+
+            <div class="research-intro">
+                <p>The Wang Lab aims to bridge the gap between mechanistic biology and clinical applications by integrating multi-omics, pathology, medical imaging, and clinical informatics through advanced AI foundation models. Our research focuses on two core questions:</p>
+
+                <ul style="list-style: none; padding: 0;">
+                    
+                    <li>• How epigenetic mechanisms regulate the transcriptome and drive transcriptional shifts</li>
+                    
+                    <li>• How these shifts influence cell states, morphology, and tissue-level phenotypes</li>
+                    
+                </ul>
+
+                <p>To achieve this, we develop multi-modality foundation models that integrate high-dimensional molecular data (scRNA-seq, ATAC-seq, spatial transcriptomics) with histopathology, radiology, and clinical records. These models form a closed learning loop:</p>
+            </div>
+
+            <div class="feature-container">
+
+                
+                <div class="feature-row">
+                    <div class="feature-text">
+                        <h3 class="feature-title">Mechanism to Clinic</h3>
+                        <div class="feature-desc">
+                            • <b>Mechanism to Clinic:</b> Using large-scale multi-omics datasets, we build generative and predictive models that connect molecular perturbations, such as chromatin remodeling, transcriptional shifts, and signaling pathway activation, to tissue architecture, pathology phenotypes, and ultimately patient outcomes. This enables tasks like virtual staining, disease subtyping, and therapy response prediction.<br><br> • <b>Clinic to Mechanism:</b> By leveraging clinical informatics and large pathology imaging cohorts, we extract interpretable morphological and radiological features to uncover hidden molecular states and microenvironmental interactions. These insights guide new hypotheses, enabling us to reverse-infer gene programs and prioritize biomarkers directly from clinical data.<br> Through this multi-scale integration, we link computational biology, computational pathology, and clinical decision-making into a unified framework. We are especially focused on endothelial cell biology, studying differentiation, trans-differentiation, and chromatin stability, while extending these principles to precision diagnostics and therapeutic strategies.
+                        </div>
+                    </div>
+                    <div class="feature-image-wrapper" style="background: #f0fdfa;">
+                        <img src="./assets/diagram.png" alt="Mechanism to Clinic" class="feature-image">
+                    </div>
+                </div>
+                
+                <div class="feature-row">
+                    <div class="feature-text">
+                        <h3 class="feature-title">AI & Machine Learning</h3>
+                        <div class="feature-desc">
+                            Data-driven research in Wang lab is powered by artificial intelligence (AI) and machine learning that guide us to understand more about biological systems and processes. We are currently working on:<br> <br> 1. Deep learning for transcriptome to predict cell state transition and pseudo-time based on the RNA velocity model. (Nature Biotechnology, 2023)<br> 2. Transferring learning for scRNA-seq and scATAC-seq to predict therapy choice and patient outcome.<br> 3. Web-based workflows of single-cell multi-omics to efficiently implement data preparation, advanced analysis, and integrative analysis of scRNA-seq and scATAC-seq.<br>
+                        </div>
+                    </div>
+                    <div class="feature-image-wrapper" style="background: #eff6ff;">
+                        <img src="./assets/machine_learning.png" alt="AI & Machine Learning" class="feature-image">
+                    </div>
+                </div>
+                
+                <div class="feature-row">
+                    <div class="feature-text">
+                        <h3 class="feature-title">Computational Pathology</h3>
+                        <div class="feature-desc">
+                            Computational pathology research in the Wang Lab leverages advanced AI and machine learning models to decode cellular morphology, spatial organization, and tissue-level phenotypes. By integrating histopathology images with spatial transcriptomics and multi-omics data, we aim to uncover how molecular programs are reflected in tissue structure and disease progression. We are currently working on:<br> <br> 1. Thor: A deep-learning platform for cell-level integration of histology and spatial transcriptomics, enabling discovery of morphology-associated gene programs and molecular determinants of cell states. (Nature Communications, 2025)<br> 2. Loki: A foundation model for cross-tissue alignment, annotation, and decomposition using paired histology and multi-omics data, improving cross-cohort generalization and enabling accurate cell-type mapping at scale (Nature Methods, 2025).<br> 3. Multi-modality foundation models: Developing transferable representations that unify computational pathology and computational biology, supporting downstream applications such as virtual staining, phenotype retrieval, and predicting molecular signatures directly from pathology images.<br>
+                        </div>
+                    </div>
+                    <div class="feature-image-wrapper" style="background: #fdf2f8;">
+                        <img src="./assets/ai_comp.png" alt="Computational Pathology" class="feature-image">
+                    </div>
+                </div>
+                
+                <div class="feature-row">
+                    <div class="feature-text">
+                        <h3 class="feature-title">Chromatin Structure</h3>
+                        <div class="feature-desc">
+                            <br> The Wang lab seeks to understand the chromatin folding of genomic DNA, which is one of the most basic and important genomic regulations in dynamic processes such as differentiation or cellular state switching. We have developed computational methods to investigate cell identity-associated TADs (topological associated domains), stripes, and loops. We initially detected split and merging of TADs comparing fibroblast to ECs and suggested these TAD splitting and merging may play important role in cell differentiation and are highly associated with histone modification alternation (Wang et al, Genome Biology, 2020). We also developed computational methods that decipher open chromatin, histone modification, and transcription factor binding genome-wide in sub-populations of cells undergoing dynamic processes such as differentiation or stochastic state switching (Wang et al, Nature Communication, 2020; Wang et al, GPB, 2021).
+                        </div>
+                    </div>
+                    <div class="feature-image-wrapper" style="background: #fff7ed;">
+                        <img src="./assets/chromatin.png" alt="Chromatin Structure" class="feature-image">
+                    </div>
+                </div>
+                
+
+            </div>
         </div>
-        
-      </div>
-      <div class="btn">
-      <button onclick="Play()" type="button" class="button" ><img src="./assets/pause.png" alt="buttonpng"></button>
-      
-  </div>
-  <div id="error"></div>
-    </div>  
-    
-    <script> 
-      function Play()
-      {
-        var vid = document.getElementById("video");
-        if(vid.paused) {
-          vid.play();
-        }
-        else {
-          vid.pause();
-        }
-      }
-    </script> 
-    <!-- --------- Research Section --------- -->
-    <!--EDIT TEXT HERE-->
-    <div class="research" id="home" >
-      <div class="container ">
-        <div class="content">
-            <h1 class="heading edit" id="content2">RESEARCH</h1>
-            <p class="text edit">
-              The Wang Lab aims to bridge the gap between mechanistic biology and clinical applications by integrating multi-omics, pathology, medical imaging, and clinical informatics through advanced AI foundation models.<br>
-                Our research focuses on two core questions:<br>
-                &emsp;• How epigenetic mechanisms regulate the transcriptome and drive transcriptional shifts <br>
-                &emsp;• How these shifts influence cell states, morphology, and tissue-level phenotypes<br>
-                To achieve this, we develop multi-modality foundation models that integrate high-dimensional molecular data (scRNA-seq, ATAC-seq, spatial transcriptomics) with histopathology, radiology, and clinical records. These models form a closed learning loop:<br>
+    </section>
 
-                <!-- INSERTED IMAGE START -->
-                <img
-                  class="inline-illustration"
-                  src="./assets/diagram.png"
-                  alt="Mechanism to Clinic diagram"
-                  loading="lazy" decoding="async"
-                  style="margin-left:250px; width: 300px;"
-                > <br>
-                <!-- INSERTED IMAGE END -->
-
-                &emsp;• <b>Mechanism to Clinic:</b> Using large-scale multi-omics datasets, we build generative and predictive models that connect molecular perturbations, such as chromatin remodeling, transcriptional shifts, and signaling pathway activation, to tissue architecture, pathology phenotypes, and ultimately patient outcomes. This enables tasks like virtual staining, disease subtyping, and therapy response prediction.<br>
-                &emsp;• <b>Clinic to Mechanism:</b> By leveraging clinical informatics and large pathology imaging cohorts, we extract interpretable morphological and radiological features to uncover hidden molecular states and microenvironmental interactions. These insights guide new hypotheses, enabling us to reverse-infer gene programs and prioritize biomarkers directly from clinical data.<br>
-                Through this multi-scale integration, we link computational biology, computational pathology, and clinical decision-making into a unified framework. We are especially focused on endothelial cell biology, studying differentiation, trans-differentiation, and chromatin stability, while extending these principles to precision diagnostics and therapeutic strategies.
-            </p>
-
-            <h2 class="sub-heading edit">
-              AI & Machine learning
-            </h2>
-            <p class="text edit">
-              Data-driven research in Wang lab is powered by artificial intelligence (AI) and machine learning that guide us to understand more about biological systems and processes. We are currently working on:<br>
-              <!-- INSERTED IMAGE START -->
-                <img
-                  class="inline-illustration"
-                  src="./assets/machine_learning.png"
-                  alt="Mechanism to Clinic diagram"
-                  loading="lazy" decoding="async"
-                  style="margin-left:250px; width: 300px; height: 320px;"
-                > <br>
-                <!-- INSERTED IMAGE END -->
-              &emsp;1. Deep learning for transcriptome to predict cell state transition and pseudo-time based on the RNA velocity model. (Nature Biotechnology, 2023)<br>
-              &emsp;2. Transferring learning for scRNA-seq and scATAC-seq to predict therapy choice and patient outcome.<br>
-              &emsp;3. Web-based workflows of single-cell multi-omics to efficiently implement data preparation, advanced analysis, and integrative analysis of scRNA-seq and scATAC-seq.<br>
-            </p>
-
-            <h2 class="sub-heading edit">
-              AI & Machine Learning in Computational Pathology
-            </h2>
-            <p class="text edit">
-              Computational pathology research in the Wang Lab leverages advanced AI and machine learning models to decode cellular morphology, spatial organization, and tissue-level phenotypes. By integrating histopathology images with spatial transcriptomics and multi-omics data, we aim to uncover how molecular programs are reflected in tissue structure and disease progression. We are currently working on:<br>
-              <!-- INSERTED IMAGE START -->
-                <img
-                  class="inline-illustration"
-                  src="./assets/ai_comp.png"
-                  alt="Mechanism to Clinic diagram"
-                  loading="lazy" decoding="async"
-                  style="margin-left:250px; width: 300px; height: 300px;"
-                > <br>
-                <!-- INSERTED IMAGE END -->
-              &emsp;1. Thor: A deep-learning platform for cell-level integration of histology and spatial transcriptomics, enabling discovery of morphology-associated gene programs and molecular determinants of cell states. (Nature Communications, 2025)<br>
-              &emsp;2. Loki: A foundation model for cross-tissue alignment, annotation, and decomposition using paired histology and multi-omics data, improving cross-cohort generalization and enabling accurate cell-type mapping at scale (Nature Methods, 2025).<br>
-              &emsp;3. Multi-modality foundation models: Developing transferable representations that unify computational pathology and computational biology, supporting downstream applications such as virtual staining, phenotype retrieval, and predicting molecular signatures directly from pathology images.<br>
-            </p>
-
-            <h2 class="sub-heading edit">
-              Chromatin structure & Histone modification:
-            </h2>
-            <p class="text edit">
-              <!-- INSERTED IMAGE START -->
-                <img
-                  class="inline-illustration"
-                  src="./assets/chromatin.png"
-                  alt="Mechanism to Clinic diagram"
-                  loading="lazy" decoding="async"
-                  style="margin-left:250px; width: 300px; height: 300px;"
-                > <br>
-                <!-- INSERTED IMAGE END -->
-              The Wang lab seeks to understand the chromatin folding of genomic DNA, which is one of the most basic and important genomic regulations in dynamic processes such as differentiation or cellular state switching. We have developed computational methods to investigate cell identity-associated TADs (topological associated domains), stripes, and loops. We initially detected split and merging of TADs comparing fibroblast to ECs and suggested these TAD splitting and merging may play important role in cell differentiation and are highly associated with histone modification alternation (Wang et al, Genome Biology, 2020). We also developed computational methods that decipher open chromatin, histone modification, and transcription factor binding genome-wide in sub-populations of cells undergoing dynamic processes such as differentiation or stochastic state switching (Wang et al, Nature Communication, 2020; Wang et al, GPB, 2021).
-              
-            </p>
-           
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/GuangyuWangLab2021" class="social-link" aria-label="GitHub"><i
+                        class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/guangyu-wang-27696819b/" class="social-link"
+                    aria-label="LinkedIn"><i class="fa fa-linkedin-square"></i></a>
+                <a href="https://twitter.com/Guangyu_Wang01" class="social-link" aria-label="Twitter"><i
+                        class="fa fa-twitter"></i></a>
+            </div>
+            <p class="footer-text">&copy; 2023 Wang Lab. Design by Tu (Alex) N Tran.</p>
         </div>
-      </div>
-    </div>
-    <script>
-      
-    </script>
-  </main>
-
-  <footer>
-    <!-- --------- Footer --------- -->
-    <div class="foot">
-      <div class="container ">
-      
-      <a href="https://github.com/GuangyuWangLab2021" class="fa fa-github" style="font-size:24px"></a> <a href="https://www.linkedin.com/in/guangyu-wang-27696819b/" class="fa fa-linkedin-square" style="font-size:24px"></a><a href="https://twitter.com/Guangyu_Wang01" class="fa fa-twitter" style="font-size:24px"></a>
-      <p class="text">©2023 by Wang lab.</p>
-      <p class="text text2">Design by Tu (Alex) N Tran.</p>
-      
-    </div>
-    <button id="edit" onclick="myFunction()">edit</button>
-    <button id="edit" onclick="mySave()">save</button>
-  </div>
-  
-  </footer>
-
-  <!-- JavaScript Files -->
-  <script src="./js/jquery.js" type="text/javascript"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="./js/app.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    </footer>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

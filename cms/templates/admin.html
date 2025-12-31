@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wang Lab Website Builder</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 font-sans" x-data="cms()">
+
+    <!-- Top Bar -->
+    <div class="bg-slate-900 text-white p-4 shadow-lg fixed top-0 w-full z-50 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <div class="font-serif text-xl font-bold tracking-wider">WANG LAB</div>
+            <span class="text-xs bg-teal-600 px-2 py-1 rounded-full uppercase tracking-wide font-bold">Admin
+                Builder</span>
+        </div>
+        <button @click="saveChanges()"
+            class="bg-teal-500 hover:bg-teal-400 text-white px-6 py-2 rounded-lg font-bold shadow-md transition flex items-center gap-2">
+            <i class="fa fa-save"></i> <span x-text="saving ? 'Publishing...' : 'Publish Changes'"></span>
+        </button>
+    </div>
+
+    <div class="flex h-screen pt-16">
+        <!-- Sidebar -->
+        <div class="w-64 bg-white shadow-md border-r border-gray-200 h-full fixed left-0 top-16 overflow-y-auto">
+            <div class="p-4">
+                <div class="text-xs font-bold text-gray-400 uppercase mb-2">Pages</div>
+                <nav class="space-y-1">
+                    <button @click="switchPage('home')"
+                        :class="page === 'home' ? 'bg-teal-50 text-teal-800 border-teal-200' : 'text-gray-600 hover:bg-gray-50 border-transparent'"
+                        class="w-full text-left block p-3 rounded-lg font-medium border border-l-4 transition flex items-center"><i
+                            class="fa fa-home opacity-50 mr-3 w-5"></i> Home</button>
+                    <button @click="switchPage('contact')"
+                        :class="page === 'contact' ? 'bg-teal-50 text-teal-800 border-teal-200' : 'text-gray-600 hover:bg-gray-50 border-transparent'"
+                        class="w-full text-left block p-3 rounded-lg font-medium border border-l-4 transition flex items-center"><i
+                            class="fa fa-envelope opacity-50 mr-3 w-5"></i> Contact</button>
+                    <button @click="switchPage('team')"
+                        :class="page === 'team' ? 'bg-teal-50 text-teal-800 border-teal-200' : 'text-gray-600 hover:bg-gray-50 border-transparent'"
+                        class="w-full text-left block p-3 rounded-lg font-medium border border-l-4 transition flex items-center"><i
+                            class="fa fa-users opacity-50 mr-3 w-5"></i> Team</button>
+                    <button @click="switchPage('news')"
+                        :class="page === 'news' ? 'bg-teal-50 text-teal-800 border-teal-200' : 'text-gray-600 hover:bg-gray-50 border-transparent'"
+                        class="w-full text-left block p-3 rounded-lg font-medium border border-l-4 transition flex items-center"><i
+                            class="fa fa-newspaper opacity-50 mr-3 w-5"></i> News</button>
+                    <button @click="switchPage('software')"
+                        :class="page === 'software' ? 'bg-teal-50 text-teal-800 border-teal-200' : 'text-gray-600 hover:bg-gray-50 border-transparent'"
+                        class="w-full text-left block p-3 rounded-lg font-medium border border-l-4 transition flex items-center"><i
+                            class="fa fa-code opacity-50 mr-3 w-5"></i> Software</button>
+                    <button @click="switchPage('positions')"
+                        :class="page === 'positions' ? 'bg-teal-50 text-teal-800 border-teal-200' : 'text-gray-600 hover:bg-gray-50 border-transparent'"
+                        class="w-full text-left block p-3 rounded-lg font-medium border border-l-4 transition flex items-center"><i
+                            class="fa fa-briefcase opacity-50 mr-3 w-5"></i> Positions</button>
+                    <button @click="switchPage('publications')"
+                        :class="page === 'publications' ? 'bg-teal-50 text-teal-800 border-teal-200' : 'text-gray-600 hover:bg-gray-50 border-transparent'"
+                        class="w-full text-left block p-3 rounded-lg font-medium border border-l-4 transition flex items-center"><i
+                            class="fa fa-book opacity-50 mr-3 w-5"></i> Publications</button>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="ml-64 flex-1 p-8 overflow-y-auto h-full scroll-smooth">
+
+            <div x-show="loading" class="flex justify-center items-center h-64 text-gray-500">
+                <i class="fa fa-spinner fa-spin fa-2x mr-3"></i> Loading data...
+            </div>
+
+            <div x-show="!loading" class="max-w-4xl mx-auto space-y-8 pb-20">
+
+                <!-- HOME EDITOR -->
+                <div x-show="page === 'home'" class="space-y-8">
+                    <!-- Hero -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <div class="bg-slate-50 border-b border-gray-200 p-4 font-bold text-slate-700"><i
+                                class="fa fa-video-camera mr-2"></i> Hero Section</div>
+                        <div class="p-6 grid gap-4">
+                            <div><label class="block text-sm font-bold text-gray-700">Video Source</label><input
+                                    x-model="homeData.hero.video" class="w-full border p-2 rounded"></div>
+                            <div><label class="block text-sm font-bold text-gray-700">Subtitle</label><input
+                                    x-model="homeData.hero.subtitle" class="w-full border p-2 rounded"></div>
+                            <div class="flex gap-4">
+                                <div class="flex-1"><label class="block text-sm font-bold text-gray-700">Button
+                                        Text</label><input x-model="homeData.hero.button_text"
+                                        class="w-full border p-2 rounded"></div>
+                                <div class="flex-1"><label class="block text-sm font-bold text-gray-700">Button
+                                        Link</label><input x-model="homeData.hero.button_link"
+                                        class="w-full border p-2 rounded"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Intro -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <div class="bg-slate-50 border-b border-gray-200 p-4 font-bold text-slate-700"><i
+                                class="fa fa-align-left mr-2"></i> Research Intro</div>
+                        <div class="p-6 space-y-4">
+                            <input x-model="homeData.intro.title"
+                                class="w-full font-bold text-lg border-b focus:border-teal-500"
+                                placeholder="Section Title">
+                            <textarea x-model="homeData.intro.text_1" rows="3"
+                                class="w-full border p-2 rounded"></textarea>
+
+                            <div class="bg-gray-50 p-4 rounded">
+                                <label class="block text-xs font-bold text-gray-400 uppercase mb-2">Bullet
+                                    Points</label>
+                                <template x-for="(bullet, i) in homeData.intro.bullets" :key="i">
+                                    <div class="flex gap-2 mb-2">
+                                        <input x-model="homeData.intro.bullets[i]" class="flex-1 border p-1 rounded">
+                                        <button @click="homeData.intro.bullets.splice(i,1)" class="text-red-400"><i
+                                                class="fa fa-times"></i></button>
+                                    </div>
+                                </template>
+                                <button @click="homeData.intro.bullets.push('New Point')"
+                                    class="text-sm text-teal-600">+ Add Bullet</button>
+                            </div>
+
+                            <textarea x-model="homeData.intro.text_2" rows="3"
+                                class="w-full border p-2 rounded"></textarea>
+                        </div>
+                    </div>
+                    <!-- Features -->
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg text-gray-700">Research Features</h3>
+                            <button
+                                @click="addItem('homeData', 'features', {title:'New Feature', description:'', image:'./assets/diagram.png', bg_color:'#f0fdfa'})"
+                                class="bg-teal-600 text-white px-3 py-1 rounded">+ Add Feature</button>
+                        </div>
+                        <template x-for="(feat, i) in homeData.features" :key="i">
+                            <div class="bg-white p-6 rounded-xl shadow-sm border relative">
+                                <button @click="removeItem('homeData', 'features', i)"
+                                    class="absolute top-4 right-4 text-gray-300 hover:text-red-500"><i
+                                        class="fa fa-trash"></i></button>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="space-y-3">
+                                        <input x-model="feat.title"
+                                            class="font-bold text-lg w-full border-b focus:border-teal-500">
+                                        <div class="flex gap-2">
+                                            <input x-model="feat.bg_color" type="color"
+                                                class="h-8 w-8 rounded cursor-pointer">
+                                            <input x-model="feat.image" class="flex-1 border-b text-sm text-gray-500">
+                                        </div>
+                                        <textarea x-model="feat.description" rows="5"
+                                            class="w-full border p-2 rounded text-sm"></textarea>
+                                    </div>
+                                    <div class="rounded-lg flex items-center justify-center border"
+                                        :style="`background-color: ${feat.bg_color}`">
+                                        <img :src="feat.image" class="max-h-48 max-w-full">
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+
+                <!-- CONTACT EDITOR -->
+                <div x-show="page === 'contact'" class="space-y-6">
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <div class="bg-slate-50 border-b border-gray-200 p-4 font-bold text-slate-700"><i
+                                class="fa fa-info-circle mr-2"></i> Contact Info</div>
+                        <div class="p-6 grid gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Address Lines</label>
+                                <template x-for="(line, i) in contactData.address_lines" :key="i">
+                                    <div class="flex gap-2 mb-2">
+                                        <input x-model="contactData.address_lines[i]" class="flex-1 border p-2 rounded">
+                                        <button @click="contactData.address_lines.splice(i,1)" class="text-red-400"><i
+                                                class="fa fa-times"></i></button>
+                                    </div>
+                                </template>
+                                <button @click="contactData.address_lines.push('New Line')"
+                                    class="text-sm text-teal-600">+ Add Line</button>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700">Email</label>
+                                <input x-model="contactData.email" class="w-full border p-2 rounded">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700">Map Embed URL</label>
+                                <input x-model="contactData.map_embed_url"
+                                    class="w-full border p-2 rounded text-xs text-gray-500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <div
+                            class="bg-slate-50 border-b border-gray-200 p-4 font-bold text-slate-700 flex justify-between">
+                            <span><i class="fa fa-share-alt mr-2"></i> Social Media</span>
+                            <button
+                                @click="addItem('contactData', 'socials', {platform:'Twitter', url:'#', icon:'fa-twitter', color:'#1DA1F2'})"
+                                class="text-sm bg-teal-600 text-white px-3 py-1 rounded">+ Add</button>
+                        </div>
+                        <div class="p-6 grid gap-4">
+                            <template x-for="(soc, i) in contactData.socials" :key="i">
+                                <div class="flex gap-3 items-center border p-3 rounded bg-gray-50">
+                                    <input x-model="soc.color" type="color" class="h-8 w-8 rounded">
+                                    <input x-model="soc.icon" class="w-24 border p-1 rounded text-xs"
+                                        placeholder="fa-icon">
+                                    <input x-model="soc.platform" class="w-24 border p-1 rounded font-bold"
+                                        placeholder="Platform">
+                                    <input x-model="soc.url" class="flex-1 border p-1 rounded text-sm"
+                                        placeholder="URL">
+                                    <button @click="removeItem('contactData', 'socials', i)" class="text-red-400"><i
+                                            class="fa fa-times"></i></button>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TEAM EDITOR -->
+                <div x-show="page === 'team'" class="space-y-8">
+                    <!-- PI Section -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <div
+                            class="bg-slate-50 border-b border-gray-200 p-4 font-bold text-slate-700 flex justify-between items-center">
+                            <span><i class="fa fa-user-tie mr-2"></i> Principal Investigator</span>
+                        </div>
+                        <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-4">
+                                <div><label class="block text-sm font-medium text-gray-700 mb-1">Name</label><input
+                                        type="text" x-model="teamData.pi.name"
+                                        class="w-full border-gray-300 rounded p-2 border">
+                                </div>
+                                <div><label class="block text-sm font-medium text-gray-700 mb-1">Role</label><input
+                                        type="text" x-model="teamData.pi.role"
+                                        class="w-full border-gray-300 rounded p-2 border">
+                                </div>
+                                <div><label class="block text-sm font-medium text-gray-700 mb-1">Image</label><input
+                                        type="text" x-model="teamData.pi.image"
+                                        class="w-full border-gray-300 rounded p-2 border bg-gray-50"></div>
+                            </div>
+                            <div><label
+                                    class="block text-sm font-medium text-gray-700 mb-1">Description</label><textarea
+                                    x-model="teamData.pi.description" rows="5"
+                                    class="w-full border-gray-300 rounded p-2 border"></textarea></div>
+                        </div>
+                    </div>
+
+                    <!-- Members List -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <div
+                            class="bg-slate-50 border-b border-gray-200 p-4 font-bold text-slate-700 flex justify-between items-center">
+                            <span><i class="fa fa-users mr-2"></i> Team Members</span>
+                            <button
+                                @click="addItem('teamData', 'members', {name:'New', role:'Student', image:'./assets/user.png', bio:''})"
+                                class="text-sm bg-teal-600 text-white px-3 py-1 rounded hover:bg-teal-500">+
+                                Add</button>
+                        </div>
+                        <div class="p-6 grid gap-4">
+                            <template x-for="(member, index) in teamData.members" :key="index">
+                                <div
+                                    class="flex gap-4 p-4 border rounded bg-gray-50 hover:bg-white hover:shadow transition group relative">
+                                    <img :src="member.image"
+                                        class="w-16 h-16 rounded-full object-cover bg-gray-200 border">
+                                    <div class="flex-1 space-y-2">
+                                        <div class="flex gap-2">
+                                            <input x-model="member.name"
+                                                class="font-bold bg-transparent border-b border-transparent focus:border-teal-500 w-1/3"
+                                                placeholder="Name">
+                                            <input x-model="member.role"
+                                                class="text-teal-600 bg-transparent border-b border-transparent focus:border-teal-500 w-1/3"
+                                                placeholder="Role">
+                                            <input x-model="member.image"
+                                                class="text-xs text-gray-400 bg-transparent border-b border-transparent focus:border-teal-500 flex-1"
+                                                placeholder="Image Path">
+                                        </div>
+                                        <textarea x-model="member.bio" rows="2"
+                                            class="w-full text-sm bg-transparent border border-transparent focus:bg-white focus:border-gray-300 rounded p-1"
+                                            placeholder="Bio..."></textarea>
+                                    </div>
+                                    <button @click="removeItem('teamData', 'members', index)"
+                                        class="absolute top-2 right-2 text-red-300 hover:text-red-500"><i
+                                            class="fa fa-times"></i></button>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+
+                    <!-- Alumni List -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <div
+                            class="bg-slate-50 border-b border-gray-200 p-4 font-bold text-slate-700 flex justify-between items-center">
+                            <span><i class="fa fa-graduation-cap mr-2"></i> Alumni</span>
+                            <button @click="addItem('teamData', 'alumni', '<strong>Name</strong> - Role')"
+                                class="text-sm bg-teal-600 text-white px-3 py-1 rounded hover:bg-teal-500">+
+                                Add</button>
+                        </div>
+                        <div class="p-6">
+                            <div class="space-y-2">
+                                <template x-for="(alum, index) in teamData.alumni" :key="index">
+                                    <div class="flex gap-2 group">
+                                        <input type="text" x-model="teamData.alumni[index]"
+                                            class="flex-1 border-gray-300 rounded shadow-sm p-2 border text-sm">
+                                        <button @click="removeItem('teamData', 'alumni', index)"
+                                            class="text-red-300 hover:text-red-500 opacity-50 group-hover:opacity-100"><i
+                                                class="fa fa-times"></i></button>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEWS EDITOR -->
+                <div x-show="page === 'news'" class="space-y-6">
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <div
+                            class="bg-slate-50 border-b border-gray-200 p-4 font-bold text-slate-700 flex justify-between items-center">
+                            <span><i class="fa fa-newspaper mr-2"></i> News Timeline</span>
+                            <button
+                                @click="addItem('newsData', null, {date:'New Date', title:'Headline', content:'Details...'})"
+                                class="text-sm bg-teal-600 text-white px-3 py-1 rounded hover:bg-teal-500">+ Add
+                                Event</button>
+                        </div>
+                        <div class="p-6 grid gap-4">
+                            <template x-for="(item, index) in newsData" :key="index">
+                                <div class="p-4 border-l-4 border-teal-500 bg-white shadow-sm rounded-r relative group">
+                                    <div class="flex gap-4 mb-2">
+                                        <input x-model="item.date"
+                                            class="font-bold text-teal-600 bg-gray-50 rounded px-2 py-1 w-32 text-center"
+                                            placeholder="Date">
+                                        <input x-model="item.title"
+                                            class="font-bold text-lg flex-1 border-b border-transparent focus:border-teal-500"
+                                            placeholder="Title">
+                                    </div>
+                                    <textarea x-model="item.content" rows="2"
+                                        class="w-full text-gray-600 bg-transparent border border-transparent focus:bg-gray-50 rounded p-2"
+                                        placeholder="Content..."></textarea>
+                                    <button @click="removeItem('newsData', null, index)"
+                                        class="absolute top-2 right-2 text-gray-300 hover:text-red-500"><i
+                                            class="fa fa-trash"></i></button>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SOFTWARE EDITOR -->
+                <div x-show="page === 'software'" class="space-y-6">
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <div
+                            class="bg-slate-50 border-b border-gray-200 p-4 font-bold text-slate-700 flex justify-between items-center">
+                            <span><i class="fa fa-code mr-2"></i> Software Tools</span>
+                            <button
+                                @click="addItem('softwareData', null, {name:'Tool Name', image:'./assets/software/default.png', description:'Description', link:'#'})"
+                                class="text-sm bg-teal-600 text-white px-3 py-1 rounded hover:bg-teal-500">+ Add
+                                Tool</button>
+                        </div>
+                        <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <template x-for="(tool, index) in softwareData" :key="index">
+                                <div class="border rounded-lg p-4 relative group hover:shadow-md transition bg-white">
+                                    <div
+                                        class="h-32 bg-gray-100 rounded mb-3 flex items-center justify-center overflow-hidden">
+                                        <img :src="tool.image" class="max-h-full max-w-full">
+                                    </div>
+                                    <input x-model="tool.image"
+                                        class="w-full text-xs text-center text-gray-400 mb-2 bg-transparent">
+                                    <input x-model="tool.name"
+                                        class="font-bold text-lg w-full mb-1 border-b border-transparent focus:border-teal-500">
+                                    <textarea x-model="tool.description" rows="3"
+                                        class="text-sm text-gray-600 w-full mb-2 bg-transparent border border-transparent focus:bg-gray-50 rounded"></textarea>
+                                    <div class="flex items-center text-teal-600 text-sm">
+                                        <i class="fa fa-link mr-2"></i> <input x-model="tool.link"
+                                            class="flex-1 bg-transparent">
+                                    </div>
+                                    <button @click="removeItem('softwareData', null, index)"
+                                        class="absolute top-2 right-2 bg-white rounded-full p-1 shadow text-red-400 hover:text-red-600"><i
+                                            class="fa fa-trash"></i></button>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- POSITIONS EDITOR -->
+                <div x-show="page === 'positions'" class="space-y-6">
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <div
+                            class="bg-slate-50 border-b border-gray-200 p-4 font-bold text-slate-700 flex justify-between items-center">
+                            <span><i class="fa fa-briefcase mr-2"></i> Open Positions</span>
+                            <button
+                                @click="addItem('positionsData', null, {title:'Job Title', type:'Full-time', description:'Desc...', qualifications:['Qual 1']})"
+                                class="text-sm bg-teal-600 text-white px-3 py-1 rounded hover:bg-teal-500">+ Add
+                                Job</button>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <template x-for="(job, index) in positionsData" :key="index">
+                                <div class="border rounded-lg p-6 relative bg-white shadow-sm">
+                                    <div class="flex justify-between mb-4">
+                                        <input x-model="job.title"
+                                            class="font-bold text-xl border-b border-transparent focus:border-teal-500">
+                                        <input x-model="job.type"
+                                            class="text-sm font-bold uppercase text-teal-600 text-right border-b border-transparent focus:border-teal-500">
+                                    </div>
+                                    <textarea x-model="job.description" rows="3"
+                                        class="w-full text-gray-700 mb-4 bg-gray-50 rounded p-2 border-transparent focus:border-gray-300"></textarea>
+
+                                    <div class="bg-gray-50 p-3 rounded">
+                                        <div class="text-xs font-bold text-gray-400 uppercase mb-2">Qualifications (one
+                                            per line)</div>
+                                        <template x-for="(q, qIndex) in job.qualifications" :key="qIndex">
+                                            <div class="flex gap-2 mb-1">
+                                                <span class="text-teal-500">•</span>
+                                                <input x-model="job.qualifications[qIndex]"
+                                                    class="flex-1 bg-transparent border-b border-gray-200 text-sm">
+                                                <button @click="job.qualifications.splice(qIndex, 1)"
+                                                    class="text-red-300 hover:text-red-500"><i
+                                                        class="fa fa-times"></i></button>
+                                            </div>
+                                        </template>
+                                        <button @click="job.qualifications.unshift('New Skill')"
+                                            class="text-xs text-teal-600 mt-1 hover:underline">+ Add Skill</button>
+                                    </div>
+                                    <button @click="removeItem('positionsData', null, index)"
+                                        class="absolute top-4 right-[-10px] translate-x-full text-gray-300 hover:text-red-500"><i
+                                            class="fa fa-trash"></i></button>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PUBLICATIONS EDITOR -->
+                <div x-show="page === 'publications'" class="space-y-6">
+                    <template x-for="(section, sIndex) in publicationsData" :key="sIndex">
+                        <div
+                            class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden relative group/section">
+                            <div
+                                class="bg-slate-50 border-b border-gray-200 p-4 font-bold text-slate-700 flex justify-between items-center">
+                                <input x-model="section.category"
+                                    class="bg-transparent border-b border-dashed border-gray-400 focus:border-teal-500 w-1/2">
+                                <div class="flex gap-2">
+                                    <button @click="section.entries.unshift({citation:'New Citation', link:'#'})"
+                                        class="text-sm bg-teal-600 text-white px-3 py-1 rounded hover:bg-teal-500">+ Add
+                                        Paper</button>
+                                    <button @click="removeItem('publicationsData', null, sIndex)"
+                                        class="text-red-400 hover:text-red-600 px-2"><i
+                                            class="fa fa-trash"></i></button>
+                                </div>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <template x-for="(pub, pIndex) in section.entries" :key="pIndex">
+                                    <div
+                                        class="flex flex-col gap-2 p-3 bg-gray-50 rounded border hover:bg-white hover:shadow-sm transition relative">
+                                        <label class="text-xs text-gray-400 font-bold uppercase">Citation (HTML
+                                            Allowed)</label>
+                                        <textarea x-model="pub.citation" rows="2"
+                                            class="w-full text-sm bg-transparent border border-gray-200 focus:bg-white focus:border-teal-500 rounded p-2"></textarea>
+                                        <div class="flex items-center gap-2">
+                                            <i class="fa fa-link text-gray-400 text-xs"></i>
+                                            <input x-model="pub.link"
+                                                class="text-xs text-teal-600 flex-1 bg-transparent border-none">
+                                        </div>
+                                        <button @click="section.entries.splice(pIndex, 1)"
+                                            class="absolute top-2 right-2 text-gray-300 hover:text-red-500"><i
+                                                class="fa fa-trash"></i></button>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </template>
+                    <button @click="addItem('publicationsData', null, {category:'New Year/Section', entries:[]})"
+                        class="w-full py-4 border-2 border-dashed border-gray-300 rounded-xl text-gray-400 hover:border-teal-500 hover:text-teal-600 font-bold transition">+
+                        Add New Publication Section</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function cms() {
+            return {
+                page: 'team',
+                loading: true,
+                saving: false,
+                teamData: { pi: {}, members: [], alumni: [] },
+                homeData: { hero: {}, intro: { bullets: [] }, features: [] },
+                contactData: { address_lines: [], socials: [] },
+                newsData: [],
+                softwareData: [],
+                positionsData: [],
+                publicationsData: [],
+
+                async init() {
+                    this.loadAll();
+                },
+
+                async loadAll() {
+                    this.loading = true;
+                    this.homeData = await (await fetch('/api/home')).json();
+                    this.contactData = await (await fetch('/api/contact')).json();
+                    this.teamData = await (await fetch('/api/team')).json();
+                    this.newsData = await (await fetch('/api/news')).json();
+                    this.softwareData = await (await fetch('/api/software')).json();
+                    this.positionsData = await (await fetch('/api/positions')).json();
+                    this.publicationsData = await (await fetch('/api/publications')).json();
+                    this.loading = false;
+                },
+
+                switchPage(p) {
+                    this.page = p;
+                },
+
+                async saveChanges() {
+                    this.saving = true;
+                    try {
+                        const endpoints = {
+                            'home': { url: '/api/home', data: this.homeData },
+                            'contact': { url: '/api/contact', data: this.contactData },
+                            'team': { url: '/api/team', data: this.teamData },
+                            'news': { url: '/api/news', data: this.newsData },
+                            'software': { url: '/api/software', data: this.softwareData },
+                            'positions': { url: '/api/positions', data: this.positionsData },
+                            'publications': { url: '/api/publications', data: this.publicationsData }
+                        };
+
+                        // Save ALL
+                        for (const [key, val] of Object.entries(endpoints)) {
+                            await fetch(val.url, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify(val.data)
+                            });
+                        }
+
+                        // Trigger Full Build (python cms/build.py)
+                        await fetch('/api/build', { method: 'POST' });
+
+                        alert("All changes published successfully!");
+                    } catch (e) {
+                        alert("Error saving: " + e);
+                    }
+                    this.saving = false;
+                },
+
+                addItem(root, listName, template) {
+                    if (listName) {
+                        this[root][listName].unshift(JSON.parse(JSON.stringify(template)));
+                    } else {
+                        this[root].unshift(JSON.parse(JSON.stringify(template)));
+                    }
+                },
+
+                removeItem(root, listName, index) {
+                    if (!confirm("Remove this item?")) return;
+                    if (listName) {
+                        this[root][listName].splice(index, 1);
+                    } else {
+                        this[root].splice(index, 1);
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

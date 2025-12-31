@@ -1,0 +1,44 @@
+[
+    {
+        "description": "Nature Communications 2025",
+        "image": "./assets/thor.png",
+        "link": "https://www.nature.com/articles/s41467-025-62593-1",
+        "name": "Thor"
+    },
+    {
+        "description": "Nature Methods 2025",
+        "image": "./assets/Loki.png",
+        "link": "https://www.nature.com/articles/s41592-025-02707-1",
+        "name": "Loki"
+    },
+    {
+        "description": "Nature Biotechnology 2023",
+        "image": "./assets/cellDancer.jpg",
+        "link": "https://www.nature.com/articles/s41587-023-01728-5",
+        "name": "cellDancer"
+    },
+    {
+        "description": "Genome Biology 2020",
+        "image": "./assets/TADsplimer.jpg",
+        "link": "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-01992-7",
+        "name": "TADsplimer"
+    },
+    {
+        "description": "Bioinformatics 2019",
+        "image": "./assets/LGC.jpg",
+        "link": "https://academic.oup.com/bioinformatics/article/35/17/2949/5288512",
+        "name": "LGC"
+    },
+    {
+        "description": "Science Advances 2022",
+        "image": "./assets/StripDiff.jpg",
+        "link": "https://www.science.org/doi/full/10.1126/sciadv.abk2246",
+        "name": "StripDiff"
+    },
+    {
+        "description": "Genomics, Proteomics & Bioinformatics 2021",
+        "image": "./assets/MACMIC.jpg",
+        "link": "https://www.sciencedirect.com/science/article/pii/S1672022921000577",
+        "name": "MACMIC"
+    }
+]

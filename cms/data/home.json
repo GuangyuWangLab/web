@@ -1,0 +1,43 @@
+{
+    "features": [
+        {
+            "bg_color": "#f0fdfa",
+            "description": "\u2022 <b>Mechanism to Clinic:</b> Using large-scale multi-omics datasets, we build generative and predictive models that connect molecular perturbations, such as chromatin remodeling, transcriptional shifts, and signaling pathway activation, to tissue architecture, pathology phenotypes, and ultimately patient outcomes. This enables tasks like virtual staining, disease subtyping, and therapy response prediction.<br><br> \u2022 <b>Clinic to Mechanism:</b> By leveraging clinical informatics and large pathology imaging cohorts, we extract interpretable morphological and radiological features to uncover hidden molecular states and microenvironmental interactions. These insights guide new hypotheses, enabling us to reverse-infer gene programs and prioritize biomarkers directly from clinical data.<br> Through this multi-scale integration, we link computational biology, computational pathology, and clinical decision-making into a unified framework. We are especially focused on endothelial cell biology, studying differentiation, trans-differentiation, and chromatin stability, while extending these principles to precision diagnostics and therapeutic strategies.",
+            "image": "./assets/diagram.png",
+            "title": "Mechanism to Clinic"
+        },
+        {
+            "bg_color": "#eff6ff",
+            "description": "Data-driven research in Wang lab is powered by artificial intelligence (AI) and machine learning that guide us to understand more about biological systems and processes. We are currently working on:<br> <br> 1. Deep learning for transcriptome to predict cell state transition and pseudo-time based on the RNA velocity model. (Nature Biotechnology, 2023)<br> 2. Transferring learning for scRNA-seq and scATAC-seq to predict therapy choice and patient outcome.<br> 3. Web-based workflows of single-cell multi-omics to efficiently implement data preparation, advanced analysis, and integrative analysis of scRNA-seq and scATAC-seq.<br>",
+            "image": "./assets/machine_learning.png",
+            "title": "AI & Machine Learning"
+        },
+        {
+            "bg_color": "#fdf2f8",
+            "description": "Computational pathology research in the Wang Lab leverages advanced AI and machine learning models to decode cellular morphology, spatial organization, and tissue-level phenotypes. By integrating histopathology images with spatial transcriptomics and multi-omics data, we aim to uncover how molecular programs are reflected in tissue structure and disease progression. We are currently working on:<br> <br> 1. Thor: A deep-learning platform for cell-level integration of histology and spatial transcriptomics, enabling discovery of morphology-associated gene programs and molecular determinants of cell states. (Nature Communications, 2025)<br> 2. Loki: A foundation model for cross-tissue alignment, annotation, and decomposition using paired histology and multi-omics data, improving cross-cohort generalization and enabling accurate cell-type mapping at scale (Nature Methods, 2025).<br> 3. Multi-modality foundation models: Developing transferable representations that unify computational pathology and computational biology, supporting downstream applications such as virtual staining, phenotype retrieval, and predicting molecular signatures directly from pathology images.<br>",
+            "image": "./assets/ai_comp.png",
+            "title": "Computational Pathology"
+        },
+        {
+            "bg_color": "#fff7ed",
+            "description": "<br> The Wang lab seeks to understand the chromatin folding of genomic DNA, which is one of the most basic and important genomic regulations in dynamic processes such as differentiation or cellular state switching. We have developed computational methods to investigate cell identity-associated TADs (topological associated domains), stripes, and loops. We initially detected split and merging of TADs comparing fibroblast to ECs and suggested these TAD splitting and merging may play important role in cell differentiation and are highly associated with histone modification alternation (Wang et al, Genome Biology, 2020). We also developed computational methods that decipher open chromatin, histone modification, and transcription factor binding genome-wide in sub-populations of cells undergoing dynamic processes such as differentiation or stochastic state switching (Wang et al, Nature Communication, 2020; Wang et al, GPB, 2021).",
+            "image": "./assets/chromatin.png",
+            "title": "Chromatin Structure"
+        }
+    ],
+    "hero": {
+        "button_link": "#research",
+        "button_text": "Explore Our Research",
+        "subtitle": "Computational Biology and Bioinformatics",
+        "video": "./assets/umap2_try.mp4"
+    },
+    "intro": {
+        "bullets": [
+            "How epigenetic mechanisms regulate the transcriptome and drive transcriptional shifts",
+            "How these shifts influence cell states, morphology, and tissue-level phenotypes"
+        ],
+        "text_1": "The Wang Lab aims to bridge the gap between mechanistic biology and clinical applications by integrating multi-omics, pathology, medical imaging, and clinical informatics through advanced AI foundation models. Our research focuses on two core questions:",
+        "text_2": "To achieve this, we develop multi-modality foundation models that integrate high-dimensional molecular data (scRNA-seq, ATAC-seq, spatial transcriptomics) with histopathology, radiology, and clinical records. These models form a closed learning loop:",
+        "title": "Research Areas"
+    }
+}

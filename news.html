@@ -1,129 +1,281 @@
 <!DOCTYPE html>
-<html lang="en" id="news">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!---<meta name="viewport" content="width=device-width, initial-scale=1.0">------>
-  <title>News | Wang Lab </title>
-  <link rel="icon" type="image/x-icon" href="./assets/baby.ico">
-
-  <!-- --------- Footer --------- -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-  <!-- --------- CSS Files --------- -->
-  <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News | Wang Lab</title>
+    <meta name="description" content="Latest news and updates from Wang Lab.">
+    <link rel="icon" type="image/x-icon" href="./assets/baby.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-  <div class="transition transition-1 is-active"></div>
-  <header>
-    <!-- --------- Navbar --------- -->
-    <nav class="container">
-          
-      <div class="links" id="link">
-        <ul>
-          <li>
-            <a href="index.html" class="nav-link" >Home</a>
-          </li>
-          <li>
-            <a href="team.html" class="nav-link" >Team</a>
-          </li>
-          <li>
-            <a href="software.html" class="nav-link">Software</a>
-          </li>
-          <li>
-            <a href="publication.html" class="nav-link">Publications</a>
-          </li>
-          <li>
-            <a href="news.html" class="nav-link">News</a>
-          </li>
-          <li>
-            <a href="contact.html" class="nav-link">Contact</a>
-          </li>
-          <li>
-            <a href="open_position.html" class="nav-link">Open Position</a>
-          </li>
-        </ul>
-      </div>
-        
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">WANG LAB</div>
+            <div class="preloader-line"></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">
+                    <span>WANG</span> LAB
+                </a>
+                <!-- Toggle Button for Mobile -->
+                <button class="navbar-toggle" type="button" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Collapsible Menu -->
+            <div class="navbar-collapse">
+                <div class="navbar-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="team.html" class="nav-link">Team</a>
+                    <a href="software.html" class="nav-link">Software</a>
+                    <a href="publication.html" class="nav-link">Publications</a>
+                    <a href="news.html" class="nav-link active">News</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="open_position.html" class="nav-link">Open Position</a>
+                </div>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <main>
-
-
-    <div class="showcase-area" id="home" >
-      <div class="container ">
-        <div class="showcase-image " >
-            <!---<img src="./assets/baby.png" class="person" width="600" height="600">--->
-        
-        <video class="person" width="1600" height="1600" autoplay loop muted>
-            <source src="./assets/Untitled_1.mp4" type="video/mp4">
-            <img src="./assets/image.png" alt="Fallback image">
-        </video>
-      </div>
-        <div class="name2">
-            <h1 class="heading" id="heading-showcase"> <span>WANG</span> LAB</h1>
-
+    <header class="section" style="padding-bottom: 0; padding-top: 150px;">
+        <div class="container text-center">
+            <h1 class="section-title" style="margin-bottom: 1rem;">News & Events</h1>
         </div>
-      </div>
-    </div>
-    <!-- --------- News Area Section --------- -->
-    <!--EDIT TEXT HERE-->
-    <div class="news bggray" >
-      <div class="container ">
-        <div class="content">
-          <h1 class="heading edit" >NEWS 📰</h1>
-          <p class="text edit">
-            • 5/18/2023 Our collaboration paper was accepted in Circulation Research! <br>
-            • 5/12/2023 Guangyu becomes a youth editor in Genomics, Proteomics & Bioinformatics (IF=8.9, Q1).<br>
-            • 5/10/2023 Zeyu Yang from Rice University accepted our offer as a Research Assistant.<br>
-            • 4/3/2023 cellDancer is online. <br>
-            • 3/28/2023 Guangyu attended PCBC celebrating at NIH and gave a talk about cellDancer. <br>
-            • 1/25/2023 Our cellDancer paper was accepted at <u><a href="https://www.nature.com/articles/s41587-023-01728-5" class="link">Nature Biotech</a></u>. Congratulations to Shengyu and Pengzhi! <br>
-            • 1/12/2023 Welcome Ibrahem to join our lab! <br>
-            • 12/2022 Welcome Alex to join our lab! <br>
-            • 8/17/2022 Our paper of cellDancer was preprinted at research square: <u><a href="https://doi.org/10.21203/rs.3.rs-1919313/v1" class="link">https://doi.org/10.21203/rs.3.rs-1919313/v1</a></u> <br>
-            • 8/16/2022 Our paper of stripeDiff was accepted on Science Advances. Cheers! <br>
-            • 3/7/2022 Weiqing accepted Ph.D. students' offer of the PBSB program at Weill Cornell! She plans to rotate in our lab in Sep. <br>
-            • 12/10/2021 Pengzhi Zhang will join us as a research associate!<br>
-            • 7/1/2021 Shengyu Li will join us as a postdoc fellowship! <br>
-            • 6/2021 Lingqun Ye will join our team soon! Cheers!<br>
-            • 6/2021 We move back to Houston! Cheers! <br>
-            • 3/2021 Dr. Wang received an assistant professor offer at Houston Methodist, Weill Cornell Medical College <br>
+    </header>
 
-          </p>
+    <main class="section">
+        <div class="container">
+            <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">10/16/2025</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Welcome New Member</h3>
+                        <p class="timeline-text">Excited to welcome Dr. Yuyan (Yolanda) Chen from Fudan University as our new postdoc fellow! 🎉 She’s bringing her large model and AI magic to push new frontiers in computational pathology and spatial biology. Welcome, Dr. Chen! 🚀</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">08/20/2025</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Grant Reviewer Invitation</h3>
+                        <p class="timeline-text">🌟 Exciting news! Dr. Guangyu Wang has been invited to serve as a grant reviewer in the NIH Biotechnology study section. This is a wonderful recognition of Dr. Wang’s leadership and impact in the scientific community - congratulations on this honor!</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">07/25/2025</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Paper Accepted in Nature Communications</h3>
+                        <p class="timeline-text">Our Paper "Thor: a platform for cell-level investigation of spatial transcriptomics and histology" was accepted in Nature Communications. Way to go Weiqing and Pengzhi!!! 🎉🧬</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">06/29/2025</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">New Principal Investigator</h3>
+                        <p class="timeline-text">We are thrilled to share that Dr. Shengyu Li has been appointed as a Principal Investigator! Congratulations, Dr. Shengyu Li, on this exciting new chapter in your scientific journey!</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">03/17/2025</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Welcome New Member</h3>
+                        <p class="timeline-text">We are pleased to announce that Dr. Qing Li from UCAS and CUPT is joining our team as a postdoctoral fellow! Welcome, Dr. Qing Li!!!</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">03/07/2025</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Paper Accepted in Nature Methods</h3>
+                        <p class="timeline-text">Our Paper "A visual–omics foundation model to bridge histopathology image with transcriptomics" was accepted in Nature Method. Way to go Weiqing and Pengzhi!!! 🎉🧬</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">09/23/2024</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Welcome New Member</h3>
+                        <p class="timeline-text">We are pleased to announce that Dr. Jian Sang from NIH is joining our team as a Research Associate! Welcome, Dr. Jian Sang!!!</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">08/03/2024</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Welcome New Student</h3>
+                        <p class="timeline-text">We are welcoming our new PhD student, Xiaohan (Hannah) Zhao, from the Weill Cornell PBSB program to our lab! Looking forward to all the great science ahead!</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">05/23/2024</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Welcome New Member</h3>
+                        <p class="timeline-text">We are pleased to announce that Dr. Yiwei Xiao from Peking University is joining our team as a postdoctoral fellow! Welcome, Dr. Yiwei Xiao!!!</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">05/26/2023</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Paper Accepted in Nature Metabolism</h3>
+                        <p class="timeline-text">Our collaboration paper was accepted in Nature Metabolism! Congratulations to Shengyu!</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">05/18/2023</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Paper Accepted in Circulation Research</h3>
+                        <p class="timeline-text">Our collaboration paper was accepted in Circulation Research!</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">05/12/2023</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Editorial Board</h3>
+                        <p class="timeline-text">Guangyu becomes a youth editor in Genomics, Proteomics & Bioinformatics (IF=8.9, Q1).</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">05/10/2023</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Welcome New Member</h3>
+                        <p class="timeline-text">Zeyu Yang from Rice University accepted our offer as a Research Assistant.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">04/03/2023</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Software Release</h3>
+                        <p class="timeline-text">cellDancer is online.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">03/28/2023</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Presentation at NIH</h3>
+                        <p class="timeline-text">Guangyu attended PCBC celebrating at NIH and gave a talk about cellDancer.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">01/25/2023</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Paper Accepted in Nature Biotech</h3>
+                        <p class="timeline-text">Our cellDancer paper was accepted at <a href="https://www.nature.com/articles/s41587-023-01728-5">Nature Biotech</a>. Congratulations to Shengyu and Pengzhi!</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">01/12/2023</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Welcome New Member</h3>
+                        <p class="timeline-text">Welcome Ibrahem to join our lab!</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">12/2022</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Welcome New Member</h3>
+                        <p class="timeline-text">Welcome Alex to join our lab!</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">08/17/2022</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Preprint Released</h3>
+                        <p class="timeline-text">Our paper of cellDancer was preprinted at research square.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">08/16/2022</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Paper Accepted in Science Advances</h3>
+                        <p class="timeline-text">Our paper of stripeDiff was accepted on Science Advances. Cheers!</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">03/07/2022</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Student Offer Accepted</h3>
+                        <p class="timeline-text">Weiqing accepted Ph.D. students' offer of the PBSB program at Weill Cornell! She plans to rotate in our lab in Sep.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">12/10/2021</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Welcome New Member</h3>
+                        <p class="timeline-text">Pengzhi Zhang will join us as a research associate!</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">07/01/2021</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Welcome New Member</h3>
+                        <p class="timeline-text">Shengyu Li will join us as a postdoc fellowship!</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">06/2021</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Lab Move & Welcome</h3>
+                        <p class="timeline-text">Lingqun Ye will join our team soon! Cheers!<br>We move back to Houston! Cheers!</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">03/2021</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">New Position</h3>
+                        <p class="timeline-text">Dr. Wang received an assistant professor offer at Houston Methodist, Weill Cornell Medical College</p>
+                    </div>
+                </div>
+                
+            </div>
         </div>
-      </div>
-    </div>
-    
-    
-    
-  </main>
+    </main>
 
-  <footer>
-    <!-- --------- Footer --------- -->
-    <div class="foot">
-      <div class="container ">
-      
-      <a href="https://github.com/GuangyuWangLab2021" class="fa fa-github" style="font-size:24px"></a> <a href="https://www.linkedin.com/in/guangyu-wang-27696819b/" class="fa fa-linkedin-square" style="font-size:24px"></a><a href="https://twitter.com/Guangyu_Wang01" class="fa fa-twitter" style="font-size:24px"></a>
-      <p class="text">©2023 by Wang lab.</p>
-      <p class="text text2">Design by Tu (Alex) N Tran.</p>
-      
-    </div>
-    <button id="edit" onclick="myFunction()">edit</button>
-    <button id="edit" onclick="mySave()">save</button>
-  </div>
-  
-  </footer>
-
-  <!-- JavaScript Files -->
-
-  <script src="./js/jquery.js" type="text/javascript"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="./js/app.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/GuangyuWangLab2021" class="social-link" aria-label="GitHub"><i
+                        class="fa fa-github"></i></a>
+                <a href="https://twitter.com/WangLab_Method" class="social-link" aria-label="Twitter"><i
+                        class="fa fa-twitter"></i></a>
+                <a href="mailto:guangyu.wang@houstonmethodist.org" class="social-link" aria-label="Email"><i
+                        class="fa fa-envelope"></i></a>
+            </div>
+            <p class="footer-text">&copy; 2023 Wang Lab. Design by Tu (Alex) N Tran.</p>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

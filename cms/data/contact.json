@@ -1,0 +1,27 @@
+{
+    "address_lines": [
+        "Center for Bioinformatics and Computational Biology",
+        "Department of Cardiovascular Sciences",
+        "Houston Methodist",
+        "Weill Cornell Medical College",
+        "1840 Dynamic Wy.",
+        "Houston, TX 77030"
+    ],
+    "email": "gwang2@houstonmethodist.org",
+    "map_embed_url": "https://maps.google.com/maps?q=1840+Dynamic+Wy,+Houston,+TX+77030&t=&z=15&ie=UTF8&iwloc=&output=embed",
+    "socials": [
+        {
+            "color": "#1DA1F2",
+            "icon": "fa-twitter",
+            "platform": "Twitter",
+            "url": "https://twitter.com/Guangyu_Wang01"
+        },
+        {
+            "color": "#333",
+            "icon": "fa-github",
+            "platform": "GitHub",
+            "url": "https://github.com/GuangyuWangLab2021"
+        }
+    ],
+    "title": "Get in Touch"
+}

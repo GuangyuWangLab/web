@@ -4,7 +4,7 @@
             "bg_color": "#f0fdfa",
             "description": "\u2022 <b>Mechanism to Clinic:</b> Using large-scale multi-omics datasets, we build generative and predictive models that connect molecular perturbations, such as chromatin remodeling, transcriptional shifts, and signaling pathway activation, to tissue architecture, pathology phenotypes, and ultimately patient outcomes. This enables tasks like virtual staining, disease subtyping, and therapy response prediction.<br><br> \u2022 <b>Clinic to Mechanism:</b> By leveraging clinical informatics and large pathology imaging cohorts, we extract interpretable morphological and radiological features to uncover hidden molecular states and microenvironmental interactions. These insights guide new hypotheses, enabling us to reverse-infer gene programs and prioritize biomarkers directly from clinical data.<br> Through this multi-scale integration, we link computational biology, computational pathology, and clinical decision-making into a unified framework. We are especially focused on endothelial cell biology, studying differentiation, trans-differentiation, and chromatin stability, while extending these principles to precision diagnostics and therapeutic strategies.",
             "image": "./assets/diagram.png",
-            "title": "Mechanism to Clinic"
+            "title": ""
         },
         {
             "bg_color": "#eff6ff",

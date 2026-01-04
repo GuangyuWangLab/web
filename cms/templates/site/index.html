@@ -89,7 +89,9 @@
                 {% for feature in features %}
                 <div class="feature-row">
                     <div class="feature-text">
+                        {% if feature.title %}
                         <h3 class="feature-title">{{ feature.title }}</h3>
+                        {% endif %}
                         <div class="feature-desc">
                             {{ feature.description|safe }}
                         </div>

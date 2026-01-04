@@ -8,7 +8,7 @@ A modern, responsive static website for the Wang Lab at Houston Methodist / Weil
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/GuangyuWangLab2021/web.git
+git clone https://github.com/GuangyuWangLab2021/web.git -b updated_web
 cd web
 ```
 

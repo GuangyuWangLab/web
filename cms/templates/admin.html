@@ -11,6 +11,8 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- SortableJS -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 </head>
 
 <body class="bg-gray-100 font-sans" x-data="cms()">
@@ -126,18 +128,22 @@
                         </div>
                     </div>
                     <!-- Features -->
-                    <div class="space-y-4">
+                    <div class="space-y-4" x-init="setupSortable($el, () => homeData.features)">
                         <div class="flex justify-between items-center">
                             <h3 class="font-bold text-lg text-gray-700">Research Features</h3>
                             <button
                                 @click="addItem('homeData', 'features', {title:'New Feature', description:'', image:'./assets/diagram.png', bg_color:'#f0fdfa'})"
                                 class="bg-teal-600 text-white px-3 py-1 rounded">+ Add Feature</button>
                         </div>
-                        <template x-for="(feat, i) in homeData.features" :key="i">
-                            <div class="bg-white p-6 rounded-xl shadow-sm border relative">
-                                <button @click="removeItem('homeData', 'features', i)"
-                                    class="absolute top-4 right-4 text-gray-300 hover:text-red-500"><i
-                                        class="fa fa-trash"></i></button>
+                        <template x-for="(feat, i) in homeData.features" :key="feat._uid">
+                            <div class="sort-item bg-white p-6 rounded-xl shadow-sm border relative"
+                                :data-id="feat._uid">
+                                <div class="absolute top-4 right-4 flex gap-2">
+                                    <i
+                                        class="fa fa-bars handle text-gray-300 hover:text-gray-500 cursor-move text-lg mr-2"></i>
+                                    <button @click="removeItem('homeData', 'features', i)"
+                                        class="text-gray-300 hover:text-red-500"><i class="fa fa-trash"></i></button>
+                                </div>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div class="space-y-3">
                                         <input x-model="feat.title"
@@ -198,9 +204,10 @@
                                 @click="addItem('contactData', 'socials', {platform:'Twitter', url:'#', icon:'fa-twitter', color:'#1DA1F2'})"
                                 class="text-sm bg-teal-600 text-white px-3 py-1 rounded">+ Add</button>
                         </div>
-                        <div class="p-6 grid gap-4">
-                            <template x-for="(soc, i) in contactData.socials" :key="i">
-                                <div class="flex gap-3 items-center border p-3 rounded bg-gray-50">
+                        <div class="p-6 grid gap-4" x-init="setupSortable($el, () => contactData.socials)">
+                            <template x-for="(soc, i) in contactData.socials" :key="soc._uid">
+                                <div class="sort-item flex gap-3 items-center border p-3 rounded bg-gray-50"
+                                    :data-id="soc._uid">
                                     <input x-model="soc.color" type="color" class="h-8 w-8 rounded">
                                     <input x-model="soc.icon" class="w-24 border p-1 rounded text-xs"
                                         placeholder="fa-icon">
@@ -208,8 +215,12 @@
                                         placeholder="Platform">
                                     <input x-model="soc.url" class="flex-1 border p-1 rounded text-sm"
                                         placeholder="URL">
-                                    <button @click="removeItem('contactData', 'socials', i)" class="text-red-400"><i
-                                            class="fa fa-times"></i></button>
+                                    <div class="flex gap-1 items-center">
+                                        <i
+                                            class="fa fa-bars handle text-gray-300 hover:text-gray-500 cursor-move mr-2"></i>
+                                        <button @click="removeItem('contactData', 'socials', i)"
+                                            class="text-red-400 px-1"><i class="fa fa-times"></i></button>
+                                    </div>
                                 </div>
                             </template>
                         </div>
@@ -255,10 +266,10 @@
                                 class="text-sm bg-teal-600 text-white px-3 py-1 rounded hover:bg-teal-500">+
                                 Add</button>
                         </div>
-                        <div class="p-6 grid gap-4">
-                            <template x-for="(member, index) in teamData.members" :key="index">
-                                <div
-                                    class="flex gap-4 p-4 border rounded bg-gray-50 hover:bg-white hover:shadow transition group relative">
+                        <div class="p-6 grid gap-4" x-init="setupSortable($el, () => teamData.members)">
+                            <template x-for="(member, index) in teamData.members" :key="member._uid">
+                                <div class="sort-item flex gap-4 p-4 border rounded bg-gray-50 hover:bg-white hover:shadow transition group relative"
+                                    :data-id="member._uid">
                                     <img :src="member.image"
                                         class="w-16 h-16 rounded-full object-cover bg-gray-200 border">
                                     <div class="flex-1 space-y-2">
@@ -277,9 +288,12 @@
                                             class="w-full text-sm bg-transparent border border-transparent focus:bg-white focus:border-gray-300 rounded p-1"
                                             placeholder="Bio..."></textarea>
                                     </div>
-                                    <button @click="removeItem('teamData', 'members', index)"
-                                        class="absolute top-2 right-2 text-red-300 hover:text-red-500"><i
-                                            class="fa fa-times"></i></button>
+                                    <div class="absolute top-2 right-2 flex gap-2">
+                                        <i
+                                            class="fa fa-bars handle text-gray-300 hover:text-gray-500 cursor-move text-lg mr-2"></i>
+                                        <button @click="removeItem('teamData', 'members', index)"
+                                            class="text-red-300 hover:text-red-500"><i class="fa fa-times"></i></button>
+                                    </div>
                                 </div>
                             </template>
                         </div>
@@ -295,14 +309,18 @@
                                 Add</button>
                         </div>
                         <div class="p-6">
-                            <div class="space-y-2">
+                            <div class="space-y-2" x-init="setupSortable($el, () => teamData.alumni)">
                                 <template x-for="(alum, index) in teamData.alumni" :key="index">
-                                    <div class="flex gap-2 group">
+                                    <div class="sort-item flex gap-2 group" :data-id="index">
                                         <input type="text" x-model="teamData.alumni[index]"
                                             class="flex-1 border-gray-300 rounded shadow-sm p-2 border text-sm">
-                                        <button @click="removeItem('teamData', 'alumni', index)"
-                                            class="text-red-300 hover:text-red-500 opacity-50 group-hover:opacity-100"><i
-                                                class="fa fa-times"></i></button>
+                                        <div class="flex gap-1 items-center">
+                                            <i
+                                                class="fa fa-bars handle text-gray-300 hover:text-gray-500 cursor-move mr-2"></i>
+                                            <button @click="removeItem('teamData', 'alumni', index)"
+                                                class="text-red-300 hover:text-red-500 opacity-50 group-hover:opacity-100"><i
+                                                    class="fa fa-times"></i></button>
+                                        </div>
                                     </div>
                                 </template>
                             </div>
@@ -321,9 +339,10 @@
                                 class="text-sm bg-teal-600 text-white px-3 py-1 rounded hover:bg-teal-500">+ Add
                                 Event</button>
                         </div>
-                        <div class="p-6 grid gap-4">
-                            <template x-for="(item, index) in newsData" :key="index">
-                                <div class="p-4 border-l-4 border-teal-500 bg-white shadow-sm rounded-r relative group">
+                        <div class="p-6 grid gap-4" x-init="setupSortable($el, () => newsData)">
+                            <template x-for="(item, index) in newsData" :key="item._uid">
+                                <div class="sort-item p-4 border-l-4 border-teal-500 bg-white shadow-sm rounded-r relative group"
+                                    :data-id="item._uid">
                                     <div class="flex gap-4 mb-2">
                                         <input x-model="item.date"
                                             class="font-bold text-teal-600 bg-gray-50 rounded px-2 py-1 w-32 text-center"
@@ -335,9 +354,13 @@
                                     <textarea x-model="item.content" rows="2"
                                         class="w-full text-gray-600 bg-transparent border border-transparent focus:bg-gray-50 rounded p-2"
                                         placeholder="Content..."></textarea>
-                                    <button @click="removeItem('newsData', null, index)"
-                                        class="absolute top-2 right-2 text-gray-300 hover:text-red-500"><i
-                                            class="fa fa-trash"></i></button>
+                                    <div class="absolute top-2 right-2 flex gap-2">
+                                        <i
+                                            class="fa fa-bars handle text-gray-300 hover:text-gray-500 cursor-move text-lg mr-2"></i>
+                                        <button @click="removeItem('newsData', null, index)"
+                                            class="text-gray-300 hover:text-red-500"><i
+                                                class="fa fa-trash"></i></button>
+                                    </div>
                                 </div>
                             </template>
                         </div>
@@ -355,9 +378,11 @@
                                 class="text-sm bg-teal-600 text-white px-3 py-1 rounded hover:bg-teal-500">+ Add
                                 Tool</button>
                         </div>
-                        <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <template x-for="(tool, index) in softwareData" :key="index">
-                                <div class="border rounded-lg p-4 relative group hover:shadow-md transition bg-white">
+                        <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4"
+                            x-init="setupSortable($el, () => softwareData)">
+                            <template x-for="(tool, index) in softwareData" :key="tool._uid">
+                                <div
+                                    class="sort-item border rounded-lg p-4 relative group hover:shadow-md transition bg-white">
                                     <div
                                         class="h-32 bg-gray-100 rounded mb-3 flex items-center justify-center overflow-hidden">
                                         <img :src="tool.image" class="max-h-full max-w-full">
@@ -372,9 +397,14 @@
                                         <i class="fa fa-link mr-2"></i> <input x-model="tool.link"
                                             class="flex-1 bg-transparent">
                                     </div>
-                                    <button @click="removeItem('softwareData', null, index)"
-                                        class="absolute top-2 right-2 bg-white rounded-full p-1 shadow text-red-400 hover:text-red-600"><i
-                                            class="fa fa-trash"></i></button>
+                                    <div
+                                        class="absolute top-2 right-2 flex gap-1 bg-white rounded-full p-1 shadow items-center">
+                                        <i
+                                            class="fa fa-bars handle text-gray-300 hover:text-gray-500 cursor-move text-sm mx-1"></i>
+                                        <button @click="removeItem('softwareData', null, index)"
+                                            class="text-red-400 hover:text-red-600 px-1"><i
+                                                class="fa fa-trash"></i></button>
+                                    </div>
                                 </div>
                             </template>
                         </div>
@@ -392,9 +422,10 @@
                                 class="text-sm bg-teal-600 text-white px-3 py-1 rounded hover:bg-teal-500">+ Add
                                 Job</button>
                         </div>
-                        <div class="p-6 space-y-4">
-                            <template x-for="(job, index) in positionsData" :key="index">
-                                <div class="border rounded-lg p-6 relative bg-white shadow-sm">
+                        <div class="p-6 space-y-4" x-init="setupSortable($el, () => positionsData)">
+                            <template x-for="(job, index) in positionsData" :key="job._uid">
+                                <div class="sort-item border rounded-lg p-6 relative bg-white shadow-sm"
+                                    :data-id="job._uid">
                                     <div class="flex justify-between mb-4">
                                         <input x-model="job.title"
                                             class="font-bold text-xl border-b border-transparent focus:border-teal-500">
@@ -407,33 +438,41 @@
                                     <div class="bg-gray-50 p-3 rounded">
                                         <div class="text-xs font-bold text-gray-400 uppercase mb-2">Qualifications (one
                                             per line)</div>
-                                        <template x-for="(q, qIndex) in job.qualifications" :key="qIndex">
-                                            <div class="flex gap-2 mb-1">
-                                                <span class="text-teal-500">•</span>
-                                                <input x-model="job.qualifications[qIndex]"
-                                                    class="flex-1 bg-transparent border-b border-gray-200 text-sm">
-                                                <button @click="job.qualifications.splice(qIndex, 1)"
-                                                    class="text-red-300 hover:text-red-500"><i
-                                                        class="fa fa-times"></i></button>
-                                            </div>
-                                        </template>
-                                        <button @click="job.qualifications.unshift('New Skill')"
-                                            class="text-xs text-teal-600 mt-1 hover:underline">+ Add Skill</button>
+                                        <div x-init="setupSortable($el, () => job.qualifications)">
+                                            <template x-for="(q, qIndex) in job.qualifications" :key="qIndex">
+                                                <div class="sort-item flex gap-2 mb-1 items-center" :data-id="qIndex">
+                                                    <i
+                                                        class="fa fa-bars handle text-gray-200 hover:text-gray-400 cursor-move text-xs mr-1"></i>
+                                                    <span class="text-teal-500">•</span>
+                                                    <input x-model="job.qualifications[qIndex]"
+                                                        class="flex-1 bg-transparent border-b border-gray-200 text-sm">
+                                                    <button @click="job.qualifications.splice(qIndex, 1)"
+                                                        class="text-red-300 hover:text-red-500"><i
+                                                            class="fa fa-times"></i></button>
+                                                </div>
+                                            </template>
+                                            <button @click="job.qualifications.unshift('New Skill')"
+                                                class="text-xs text-teal-600 mt-1 hover:underline">+ Add Skill</button>
+                                        </div>
+                                        <div class="absolute top-4 right-[-10px] translate-x-full flex flex-col gap-2">
+                                            <button @click="removeItem('positionsData', null, index)"
+                                                class="text-gray-300 hover:text-red-500 mb-2"><i
+                                                    class="fa fa-trash"></i></button>
+                                            <i
+                                                class="fa fa-bars handle text-gray-300 hover:text-gray-500 cursor-move text-lg"></i>
+                                        </div>
                                     </div>
-                                    <button @click="removeItem('positionsData', null, index)"
-                                        class="absolute top-4 right-[-10px] translate-x-full text-gray-300 hover:text-red-500"><i
-                                            class="fa fa-trash"></i></button>
-                                </div>
                             </template>
                         </div>
                     </div>
                 </div>
 
                 <!-- PUBLICATIONS EDITOR -->
-                <div x-show="page === 'publications'" class="space-y-6">
-                    <template x-for="(section, sIndex) in publicationsData" :key="sIndex">
-                        <div
-                            class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden relative group/section">
+                <div x-show="page === 'publications'" class="space-y-6"
+                    x-init="setupSortable($el, () => publicationsData)">
+                    <template x-for="(section, sIndex) in publicationsData" :key="section._uid">
+                        <div class="sort-item bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden relative group/section"
+                            :data-id="section._uid">
                             <div
                                 class="bg-slate-50 border-b border-gray-200 p-4 font-bold text-slate-700 flex justify-between items-center">
                                 <input x-model="section.category"
@@ -442,15 +481,19 @@
                                     <button @click="section.entries.unshift({citation:'New Citation', link:'#'})"
                                         class="text-sm bg-teal-600 text-white px-3 py-1 rounded hover:bg-teal-500">+ Add
                                         Paper</button>
-                                    <button @click="removeItem('publicationsData', null, sIndex)"
-                                        class="text-red-400 hover:text-red-600 px-2"><i
-                                            class="fa fa-trash"></i></button>
+                                    <div class="flex gap-1 items-center border-l pl-2 border-gray-200">
+                                        <i
+                                            class="fa fa-bars handle text-gray-300 hover:text-gray-500 cursor-move text-lg mr-2"></i>
+                                        <button @click="removeItem('publicationsData', null, sIndex)"
+                                            class="text-red-400 hover:text-red-600 px-1"><i
+                                                class="fa fa-trash"></i></button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="p-6 space-y-4">
-                                <template x-for="(pub, pIndex) in section.entries" :key="pIndex">
-                                    <div
-                                        class="flex flex-col gap-2 p-3 bg-gray-50 rounded border hover:bg-white hover:shadow-sm transition relative">
+                            <div class="p-6 space-y-4" x-init="setupSortable($el, () => section.entries)">
+                                <template x-for="(pub, pIndex) in section.entries" :key="pub._uid">
+                                    <div class="sort-item flex flex-col gap-2 p-3 bg-gray-50 rounded border hover:bg-white hover:shadow-sm transition relative"
+                                        :data-id="pub._uid">
                                         <label class="text-xs text-gray-400 font-bold uppercase">Citation (HTML
                                             Allowed)</label>
                                         <textarea x-model="pub.citation" rows="2"
@@ -460,9 +503,13 @@
                                             <input x-model="pub.link"
                                                 class="text-xs text-teal-600 flex-1 bg-transparent border-none">
                                         </div>
-                                        <button @click="section.entries.splice(pIndex, 1)"
-                                            class="absolute top-2 right-2 text-gray-300 hover:text-red-500"><i
-                                                class="fa fa-trash"></i></button>
+                                        <div class="absolute top-2 right-2 flex gap-1">
+                                            <i
+                                                class="fa fa-bars handle text-gray-300 hover:text-gray-500 cursor-move mr-2"></i>
+                                            <button @click="section.entries.splice(pIndex, 1)"
+                                                class="text-gray-300 hover:text-red-500"><i
+                                                    class="fa fa-trash"></i></button>
+                                        </div>
                                     </div>
                                 </template>
                             </div>
@@ -505,6 +552,28 @@
                     this.positionsData = await (await fetch('/api/positions')).json();
                     this.publicationsData = await (await fetch('/api/publications')).json();
                     this.loading = false;
+
+                    // Assign UIDs to existing objects
+                    this.assignIds(this.homeData);
+                    this.assignIds(this.contactData);
+                    this.assignIds(this.teamData);
+                    this.assignIds(this.newsData);
+                    this.assignIds(this.softwareData);
+                    this.assignIds(this.positionsData);
+                    this.assignIds(this.publicationsData);
+                },
+
+                assignIds(data) {
+                    if (Array.isArray(data)) {
+                        data.forEach(item => this.assignIds(item));
+                    } else if (typeof data === 'object' && data !== null) {
+                        if (!data._uid) data._uid = this.makeId();
+                        for (const key in data) {
+                            if (typeof data[key] === 'object') {
+                                this.assignIds(data[key]);
+                            }
+                        }
+                    }
                 },
 
                 switchPage(p) {
@@ -524,12 +593,26 @@
                             'publications': { url: '/api/publications', data: this.publicationsData }
                         };
 
+                        // Strip _uid before saving
+                        const cleanData = (data) => {
+                            if (Array.isArray(data)) {
+                                return data.map(item => cleanData(item));
+                            } else if (typeof data === 'object' && data !== null) {
+                                const { _uid, ...rest } = data;
+                                for (const key in rest) {
+                                    rest[key] = cleanData(rest[key]);
+                                }
+                                return rest;
+                            }
+                            return data;
+                        };
+
                         // Save ALL
                         for (const [key, val] of Object.entries(endpoints)) {
                             await fetch(val.url, {
                                 method: 'POST',
                                 headers: { 'Content-Type': 'application/json' },
-                                body: JSON.stringify(val.data)
+                                body: JSON.stringify(cleanData(val.data))
                             });
                         }
 
@@ -544,11 +627,58 @@
                 },
 
                 addItem(root, listName, template) {
-                    if (listName) {
-                        this[root][listName].unshift(JSON.parse(JSON.stringify(template)));
-                    } else {
-                        this[root].unshift(JSON.parse(JSON.stringify(template)));
+                    const item = JSON.parse(JSON.stringify(template));
+                    if (typeof item === 'object' && item !== null) {
+                        item._uid = this.makeId();
                     }
+
+                    if (listName) {
+                        this[root][listName].unshift(item);
+                    } else {
+                        this[root].unshift(item);
+                    }
+                },
+
+                makeId() {
+                    return 'id-' + Math.random().toString(36).substr(2, 9);
+                },
+
+                setupSortable(el, getList) {
+                    new Sortable(el, {
+                        handle: '.handle',
+                        draggable: '.sort-item',
+                        animation: 150,
+                        ghostClass: 'bg-teal-50',
+                        onEnd: (evt) => {
+                            const list = getList();
+                            if (!list || list.length === 0) return;
+
+                            // Surgical Move Strategy: Move ONLY the moved item
+                            // 1. Find Source Index (Where it was in the Data)
+                            const id = evt.item.getAttribute('data-id');
+                            let oldIndex = -1;
+
+                            if (id && typeof list[0] === 'object') {
+                                // Object: specific lookup
+                                oldIndex = list.findIndex(x => x._uid === id);
+                            } else {
+                                // Primitive: index lookup from data-id
+                                oldIndex = parseInt(id);
+                                if (isNaN(oldIndex)) oldIndex = evt.oldIndex;
+                            }
+
+                            // 2. Find Destination Index (Where it is in the DOM among sort-items)
+                            const sortItems = Array.from(el.children).filter(c => c.classList.contains('sort-item'));
+                            const newIndex = sortItems.indexOf(evt.item);
+
+                            if (oldIndex === -1 || newIndex === -1) return;
+
+                            // 3. Perform specific move
+                            // Note: splice returns array of removed items
+                            const [item] = list.splice(oldIndex, 1);
+                            list.splice(newIndex, 0, item);
+                        }
+                    });
                 },
 
                 removeItem(root, listName, index) {

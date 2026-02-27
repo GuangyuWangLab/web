@@ -1,5 +1,6 @@
 {
     "alumni": [
+        "<strong>Yuyan (Yolanda) Chen (2026)</strong> - Postdoc Fellow from Fudan University",
         "<strong>Shengyu Li (2025)</strong> - PI in Houston Methodist, Weill Cornell Medical School",
         "<strong>Ibrahem Kandel (2024)</strong> - AI Scientist, Grady Health System",
         "<strong>Zeyu Yang (2023)</strong> - PhD student in Electrical and Computer Engineering, Rice University",
@@ -46,12 +47,6 @@
             "bio": "Qing Li received a Ph.D. in computer science from CAS. She focuses on developing AI models for computational pathology, single-cell dynamics, and spatial biology.",
             "image": "./assets/team/Qing.png",
             "name": "Qing Li",
-            "role": "Postdoc Fellow"
-        },
-        {
-            "bio": "Yuyan received a Ph.D. in Computer Science from Fudan University. She focuses on building large language and multimodal models for computational pathology and spatial biology.",
-            "image": "./assets/team/Yuyan.png",
-            "name": "Yuyan (Yolanda) Chen",
             "role": "Postdoc Fellow"
         },
         {

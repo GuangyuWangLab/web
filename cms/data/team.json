@@ -1,5 +1,7 @@
 {
     "alumni": [
+        "<strong>Jian Sang (2026)</strong> - Research Associate from CAS",
+        "<strong>Pengzhi Zhang (2026)</strong> - Research Associate from University of Houston",
         "<strong>Yuyan (Yolanda) Chen (2026)</strong> - Postdoc Fellow from Fudan University",
         "<strong>Shengyu Li (2025)</strong> - PI in Houston Methodist, Weill Cornell Medical School",
         "<strong>Ibrahem Kandel (2024)</strong> - AI Scientist, Grady Health System",
@@ -7,18 +9,6 @@
         "<strong>Lingqun Ye (2022)</strong> - Associate Data Scientist, MD Anderson Cancer Center"
     ],
     "members": [
-        {
-            "bio": "Pengzhi received a Ph.D. degree in Physics at the University of Houston. He investigates the dynamic of cellular states and cell-cell communication using statistical inference and machine learning.",
-            "image": "./assets/team/Pengzhi.png",
-            "name": "Pengzhi Zhang",
-            "role": "Research Associate"
-        },
-        {
-            "bio": "Alex holds a Bachelor of Science in Mathematics with a minor in Finance at the University of Massachusetts Lowell. In Wang Lab, he manages GitHub, pipelines, and data servers, and contributes to collaborative projects with data analysis and visualization.",
-            "image": "./assets/team/Alex.png",
-            "name": "Tu (Alex) N Tran",
-            "role": "Research Assistant"
-        },
         {
             "bio": "Weiqing is a Ph.D. student at Weill Cornell Medicine interested in the intersection of machine learning/deep learning and single-cell dynamics/spatial biology, particularly RNA velocity and computational pathology.",
             "image": "./assets/team/Weiqing.png",
@@ -38,12 +28,6 @@
             "role": "Ph.D. Student"
         },
         {
-            "bio": "JS received a Ph.D. in Bioinformatics from CAS. After postdoctoral training at NCI-DCEG (NIH), he joined Wang Lab to develop emerging models for Omics and Epidemiological insights.",
-            "image": "./assets/team/Jian.png",
-            "name": "Jian Sang",
-            "role": "Research Associate"
-        },
-        {
             "bio": "Qing Li received a Ph.D. in computer science from CAS. She focuses on developing AI models for computational pathology, single-cell dynamics, and spatial biology.",
             "image": "./assets/team/Qing.png",
             "name": "Qing Li",
@@ -54,6 +38,12 @@
             "image": "./assets/team/Yuping.jpeg",
             "name": "Yuping Yang",
             "role": "Postdoc Fellow"
+        },
+        {
+            "bio": "Alex holds a Bachelor of Science in Mathematics with a minor in Finance at the University of Massachusetts Lowell. In Wang Lab, he manages GitHub, pipelines, and data servers, and contributes to collaborative projects with data analysis and visualization.",
+            "image": "./assets/team/Alex.png",
+            "name": "Tu (Alex) N Tran",
+            "role": "Research Assistant"
         }
     ],
     "pi": {

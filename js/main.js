@@ -79,10 +79,6 @@ window.addEventListener('load', function () {
             card.style.minHeight = '';
         });
 
-        if (window.innerWidth <= 768) {
-            return;
-        }
-
         let maxHeight = 0;
         cardElements.forEach(card => {
             const height = card.offsetHeight;

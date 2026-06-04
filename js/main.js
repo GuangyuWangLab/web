@@ -70,4 +70,37 @@ window.addEventListener('load', function () {
             heroContent.style.transform = 'rotateX(0) rotateY(0)';
         });
     }
+
+    function setTimelineHeights() {
+        const cardElements = document.querySelectorAll('.timeline .timeline-content');
+        if (!cardElements.length) return;
+
+        cardElements.forEach(card => {
+            card.style.minHeight = '';
+        });
+
+        if (window.innerWidth <= 768) {
+            return;
+        }
+
+        let maxHeight = 0;
+        cardElements.forEach(card => {
+            const height = card.offsetHeight;
+            if (height > maxHeight) {
+                maxHeight = height;
+            }
+        });
+
+        cardElements.forEach(card => {
+            card.style.minHeight = `${maxHeight}px`;
+        });
+    }
+
+    let resizeTimer;
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(setTimelineHeights, 120);
+    });
+
+    setTimelineHeights();
 });

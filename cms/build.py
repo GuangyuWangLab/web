@@ -16,6 +16,9 @@ def load_data(filename):
 
 
 def linkify(text):
+    if text is None:
+        return ''
+
     url_pattern = re.compile(r'((?:https?://|www\.)[^\s<]+)')
 
     def replace(match):
@@ -25,9 +28,15 @@ def linkify(text):
             href = 'http://' + href
         return f'<a class="timeline-link" href="{href}" target="_blank" rel="noopener noreferrer">Link here</a>'
 
+    def process_plain(part):
+        part = part.replace('\r\n', '\n').replace('\r', '\n')
+        part = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', part)
+        part = part.replace('\n', '<br>')
+        return url_pattern.sub(replace, part)
+
     parts = re.split(r'(<[^>]*>)', text)
-    parts = [url_pattern.sub(replace, part) if not part.startswith('<') else part for part in parts]
-    return Markup(''.join(parts))
+    processed = [process_plain(part) if not part.startswith('<') else part for part in parts]
+    return Markup(''.join(processed))
 
 
 def build_team():

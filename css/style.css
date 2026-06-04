@@ -1360,6 +1360,12 @@ video {
         left: 0;
     }
 
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        align-items: flex-start;
+        text-align: left;
+    }
+
     .timeline-item::after {
         left: 12px !important;
         /* Align dot with line */

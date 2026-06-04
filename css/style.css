@@ -1257,8 +1257,18 @@ video {
     text-align: right;
 }
 
+.timeline-item:nth-child(odd) .timeline-content {
+    align-items: flex-end;
+    text-align: right;
+}
+
 .timeline-item:nth-child(even) {
     left: 50%;
+    text-align: left;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    align-items: flex-start;
     text-align: left;
 }
 

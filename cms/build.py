@@ -1,6 +1,8 @@
 import json
 import os
+import re
 from jinja2 import Environment, FileSystemLoader
+from markupsafe import Markup
 
 # Configuration
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -11,6 +13,22 @@ OUTPUT_DIR = os.path.dirname(BASE_DIR) # Root of the project (make_new)
 def load_data(filename):
     with open(os.path.join(DATA_DIR, filename), 'r') as f:
         return json.load(f)
+
+
+def linkify(text):
+    url_pattern = re.compile(r'((?:https?://|www\.)[^\s<]+)')
+
+    def replace(match):
+        url = match.group(0)
+        href = url
+        if href.startswith('www.'):
+            href = 'http://' + href
+        return f'<a class="timeline-link" href="{href}" target="_blank" rel="noopener noreferrer">Link here</a>'
+
+    parts = re.split(r'(<[^>]*>)', text)
+    parts = [url_pattern.sub(replace, part) if not part.startswith('<') else part for part in parts]
+    return Markup(''.join(parts))
+
 
 def build_team():
     print("Building Team Page...")
@@ -40,6 +58,7 @@ def build_news():
     print("Building News Page...")
     data = load_data('news.json')
     env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
+    env.filters['linkify'] = linkify
     template = env.get_template('news.html')
     output = template.render(news=data)
     with open(os.path.join(OUTPUT_DIR, 'news.html'), 'w') as f:

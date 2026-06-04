@@ -162,6 +162,21 @@ video {
     box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
 }
 
+.timeline-link,
+.timeline-text a {
+    color: var(--primary-color) !important;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px dashed rgba(0, 113, 227, 0.5);
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.timeline-link:hover,
+.timeline-text a:hover {
+    color: var(--primary-dark) !important;
+    border-color: rgba(0, 91, 181, 0.7);
+}
+
 /* Components: Navbar */
 .navbar-toggle {
     display: none;

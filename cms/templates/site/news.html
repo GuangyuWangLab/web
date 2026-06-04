@@ -63,7 +63,7 @@
                         <div class="timeline-date">{{ item.date }}</div>
                         <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--secondary-color);">{{
                             item.title }}</h3>
-                        <p class="timeline-text">{{ item.content }}</p>
+                        <p class="timeline-text">{{ item.content | linkify }}</p>
                     </div>
                 </div>
                 {% endfor %}

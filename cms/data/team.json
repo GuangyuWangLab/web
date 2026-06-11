@@ -10,6 +10,12 @@
     ],
     "members": [
         {
+            "name": "Liang Zhao",
+            "role": "Postdoc Fellow",
+            "image": "./assets/team/Liang.png",
+            "bio": "Liang received her Ph.D. in Computer Science from the University of South Carolina and is interested in developing AI models for computational biology."
+        },
+        {
             "bio": "Weiqing is a Ph.D. student at Weill Cornell Medicine interested in the intersection of machine learning/deep learning and single-cell dynamics/spatial biology, particularly RNA velocity and computational pathology.",
             "image": "./assets/team/Weiqing.png",
             "name": "Weiqing Chen",

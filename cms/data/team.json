@@ -1,7 +1,7 @@
 {
     "alumni": [
         "<strong>Jian Sang (2026)</strong> - Research Associate from CAS",
-        "<strong>Pengzhi Zhang (2026)</strong> - Research Associate from University of Houston",
+        "<strong>Pengzhi Zhang (2026)</strong> - PI in Zhejiang University",
         "<strong>Yuyan (Yolanda) Chen (2026)</strong> - Postdoc Fellow from Fudan University",
         "<strong>Shengyu Li (2025)</strong> - PI in Houston Methodist, Weill Cornell Medical School",
         "<strong>Ibrahem Kandel (2024)</strong> - AI Scientist, Grady Health System",
@@ -10,10 +10,10 @@
     ],
     "members": [
         {
-            "name": "Liang Zhao",
-            "role": "Postdoc Fellow",
+            "bio": "Liang received her Ph.D. in Computer Science from the University of South Carolina and is interested in developing AI models for computational biology.",
             "image": "./assets/team/Liang.png",
-            "bio": "Liang received her Ph.D. in Computer Science from the University of South Carolina and is interested in developing AI models for computational biology."
+            "name": "Liang Zhao",
+            "role": "Postdoc Fellow"
         },
         {
             "bio": "Weiqing is a Ph.D. student at Weill Cornell Medicine interested in the intersection of machine learning/deep learning and single-cell dynamics/spatial biology, particularly RNA velocity and computational pathology.",
